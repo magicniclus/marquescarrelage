@@ -1,0 +1,136 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const legalLinks = [
+    { name: 'Mentions légales', href: '/mentions-legales' },
+    { name: 'CGV', href: '/cgv' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Espace pro', href: '/espace-pro' },
+  ];
+
+  return (
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main footer content */}
+        <div className="py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Logo and description */}
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center space-x-2">
+                <motion.div 
+                  className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg"
+                  whileHover={{ rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <span className="text-primary-foreground font-bold text-xl">T</span>
+                </motion.div>
+                <span className="text-xl font-bold">
+                  TrouverMonChantier
+                </span>
+              </div>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Trouvez facilement des professionnels qualifiés pour tous vos travaux de construction et de rénovation.
+              </p>
+              <a 
+                href="https://trouvermonchantier.fr" 
+                className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+              >
+                www.trouvermonchantier.fr
+              </a>
+            </motion.div>
+
+            {/* Legal links */}
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-lg font-semibold">Liens utiles</h3>
+              <ul className="space-y-2">
+                {legalLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-slate-300 hover:text-white text-sm transition-colors duration-200 hover:underline"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Contact info */}
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-lg font-semibold">Contact</h3>
+              <div className="space-y-2">
+                <a 
+                  href="tel:0123456789"
+                  className="text-slate-300 hover:text-white text-sm transition-colors duration-200 block"
+                >
+                  📞 01 23 45 67 89
+                </a>
+                <p className="text-slate-400 text-xs">
+                  Service gratuit 7j/7 de 9h à 19h
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Bottom section */}
+        <div className="border-t border-slate-800 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <motion.p 
+              className="text-slate-400 text-sm text-center md:text-left"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              © {currentYear} TrouverMonChantier. Tous droits réservés.
+            </motion.p>
+
+            {/* Powered by */}
+            <motion.p 
+              className="text-slate-500 text-xs text-center md:text-right"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              Site propulsé par{' '}
+              <a 
+                href="https://trouver-mon-chantier.fr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-500 hover:text-slate-500/80 transition-colors underline"
+              >
+                trouver-mon-chantier.fr
+              </a>
+            </motion.p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
