@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Phone } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ export default function Footer() {
     { name: 'Mentions légales', href: '/mentions-legales' },
     { name: 'CGV', href: '/cgv' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Espace pro', href: '/espace-pro' },
+    { name: 'Espace pro', href: 'https://app.trouver-mon-chantier.fr' },
   ];
 
   return (
@@ -63,6 +64,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <a
                       href={link.href}
+                      {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       className="text-slate-300 hover:text-white text-sm transition-colors duration-200 hover:underline"
                     >
                       {link.name}
@@ -84,9 +86,10 @@ export default function Footer() {
               <div className="space-y-2">
                 <a 
                   href="tel:0123456789"
-                  className="text-slate-300 hover:text-white text-sm transition-colors duration-200 block"
+                  className="text-slate-300 hover:text-white text-sm transition-colors duration-200 block flex items-center space-x-2"
                 >
-                  📞 01 23 45 67 89
+                  <Phone className="h-4 w-4" />
+                  <span>01 23 45 67 89</span>
                 </a>
                 <p className="text-slate-400 text-xs">
                   Service gratuit 7j/7 de 9h à 19h

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, User } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -55,12 +55,7 @@ export default function Navigation() {
 
   return (
     <>
-      <motion.nav 
-        className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b z-50"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
+      <nav className="bg-background/95 supports-[backdrop-filter]:bg-background/60 border-b z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
           {/* Logo à gauche */}
@@ -71,18 +66,16 @@ export default function Navigation() {
             transition={{ duration: 0.7, delay: 0.2 }}
             whileHover={{ scale: 1.02 }}
           >
-            <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2">
               <motion.div 
-                className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg"
+                className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center shadow-lg"
                 whileHover={{ rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className="text-primary-foreground font-bold text-xl">T</span>
+                <span className="text-white font-bold text-xl">T</span>
               </motion.div>
-              <span className="text-xl font-bold text-foreground">
-                TrouverMonChantier
-              </span>
-            </div>
+              <span className="text-xl font-bold text-gray-900">TrouverMonChantier</span>
+            </a>
           </motion.div>
 
           {/* Navigation au centre - Desktop */}
@@ -165,6 +158,16 @@ export default function Navigation() {
 
           {/* Menu mobile */}
           <div className="md:hidden">
+            <Button
+              variant="ghost"
+              className="text-gray-700 hover:text-gray-900 font-medium"
+              asChild
+            >
+              <a href="https://app.trouver-mon-chantier.fr" target="_blank" rel="noopener noreferrer">
+                <User className="h-4 w-4 mr-2" />
+                Mon espace
+              </a>
+            </Button>
             <Button 
               variant="ghost" 
               size="icon"
@@ -180,7 +183,7 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-    </motion.nav>
+      </nav>
 
     {/* Mobile Menu Overlay - Full Screen */}
     <AnimatePresence>
@@ -337,26 +340,25 @@ export default function Navigation() {
                 duration: 0.4 
               }}
             >
-              <Button
-                className="bg-gray-100 hover:bg-gray-200 text-gray-700 shadow-xl hover:shadow-2xl rounded-lg px-4 py-3 transition-all duration-300 flex py-4 items-center space-x-3 border border-gray-200"
-                asChild
+              <motion.a
+                href={`tel:${phoneNumber.replace(/\s/g, '')}`}
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400 }}
+                className="bg-white hover:bg-gray-50 shadow-xl hover:shadow-2xl rounded-2xl px-6 py-4 transition-all duration-300 flex items-center space-x-4 border border-gray-200"
               >
-                <motion.a
-                  href={`tel:${phoneNumber.replace(/\s/g, '')}`}
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                  className="flex items-center space-x-3 py-3"
-                >
-                  <div className="bg-green-500 rounded-full p-2">
-                    <Phone className="h-5 w-5 text-white" />
+                <div className="bg-orange-500 rounded-full p-3 shadow-lg">
+                  <Phone className="h-6 w-6 text-white" />
+                </div>
+                <div className="flex flex-col items-start">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-blue-600 font-bold text-base">Appelez-nous !</span>
+                    <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Gratuit</span>
                   </div>
-                  <div className="flex flex-col items-start">
-                    <span className="font-semibold text-sm leading-tight text-gray-800">{phoneNumber}</span>
-                    <span className="text-xs text-gray-500 leading-tight">Service gratuit 7j/7 de 9h à 19h</span>
-                  </div>
-                </motion.a>
-              </Button>
+                  <span className="text-sm text-gray-600 leading-tight">Du lundi au samedi - 8h à 19h</span>
+                  <span className="font-bold text-xl text-gray-900 mt-1">{phoneNumber}</span>
+                </div>
+              </motion.a>
             </motion.div>
           </div>
         </div>

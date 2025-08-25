@@ -11,6 +11,7 @@ interface HeroProps {
   title?: string;
   description?: string;
   bulletPoints?: string[];
+  googleReviewsWidget?: string;
 }
 
 export default function Hero({
@@ -22,7 +23,8 @@ export default function Hero({
     "Artisans certifiés et vérifiés",
     "Devis gratuits sous 24h",
     "Accompagnement personnalisé"
-  ]
+  ],
+  googleReviewsWidget
 }: HeroProps) {
   const [formData, setFormData] = useState({
     nom: '',
@@ -78,7 +80,7 @@ export default function Hero({
   };
 
   return (
-    <section className="relative h-screen md:h-[calc(100vh-81px)] flex items-center overflow-hidden md:py-0 py-20">
+    <section className="relative min-h-screen md:h-[calc(100vh-81px)] flex items-center overflow-hidden md:py-0 py-40">
       {/* Background */}
       <div 
         className="absolute inset-0 z-0"
@@ -151,10 +153,22 @@ export default function Hero({
                 </motion.li>
               ))}
             </motion.ul>
+
+            {/* Google Reviews Widget */}
+            {googleReviewsWidget && (
+              <motion.div
+                className="mt-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+                dangerouslySetInnerHTML={{ __html: googleReviewsWidget }}
+              />
+            )}
           </motion.div>
 
           {/* Right Section - Form */}
           <motion.div
+            id="contact-form"
             className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
