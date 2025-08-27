@@ -2,27 +2,25 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-interface TeamMember {
-  name: string;
-  position: string;
-  description: string;
-  photo: string;
-}
+import { TeamConfig, TeamMember } from '@/lib/config';
 
 interface TeamSectionProps {
+  config?: TeamConfig;
   title?: string;
   subtitle?: string;
-  members: TeamMember[];
+  members?: TeamMember[];
 }
 
 export default function TeamSection({
+  config,
   title = "Notre Équipe",
   subtitle = "Des professionnels passionnés à votre service",
-  members
+  members = []
 }: TeamSectionProps) {
+  // Use config values if provided, otherwise fall back to props or defaults
+  const teamMembers = config?.members || members;
   // Limit to maximum 4 members
-  const displayedMembers = members.slice(0, 4);
+  const displayedMembers = teamMembers.slice(0, 4);
 
   return (
     <section className="py-16 md:py-24 bg-white">
