@@ -2,18 +2,15 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  CarouselApi,
+  type CarouselApi,
 } from '@/components/ui/carousel';
-import { useEffect } from 'react';
 
 interface GalleryImage {
   src: string;
@@ -36,16 +33,24 @@ export default function ProjectGallery({
 }: ProjectGalleryProps) {
   const [displayCount, setDisplayCount] = useState(initialDisplayCount);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const displayedImages = images.slice(0, displayCount);
   const hasMoreImages = displayCount < images.length;
 
   const openLightbox = (index: number) => {
-    setCurrentImageIndex(index);
+    setSelectedImageIndex(index);
     setLightboxOpen(true);
     document.body.style.overflow = 'hidden';
+    // Set initial slide after carousel is mounted
+    setTimeout(() => {
+      if (api) {
+        api.scrollTo(index);
+      }
+    }, 50);
   };
 
   const closeLightbox = () => {
@@ -53,36 +58,22 @@ export default function ProjectGallery({
     document.body.style.overflow = 'unset';
   };
 
-  const [direction, setDirection] = useState(0);
-
-  const nextImage = () => {
-    setDirection(1);
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setDirection(-1);
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
   const showMoreImages = () => {
     setDisplayCount(images.length);
   };
 
   useEffect(() => {
-    if (!carouselApi) return;
+    if (!api) {
+      return;
+    }
 
-    const onSelect = () => {
-      setCurrentImageIndex(carouselApi.selectedScrollSnap());
-    };
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
 
-    carouselApi.on("select", onSelect);
-    onSelect();
-
-    return () => {
-      carouselApi.off("select", onSelect);
-    };
-  }, [carouselApi]);
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <>
@@ -154,11 +145,11 @@ export default function ProjectGallery({
         </div>
       </section>
 
-      {/* Lightbox Modal with Carousel */}
+      {/* Lightbox Modal */}
       <AnimatePresence>
         {lightboxOpen && (
           <motion.div
-            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+            className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -167,15 +158,20 @@ export default function ProjectGallery({
           >
             {/* Close Button */}
             <button
-              className="absolute top-4 right-4 z-[110] text-white hover:text-gray-300 transition-colors"
+              className="absolute top-6 right-6 z-30 text-white hover:text-gray-300 transition-colors bg-black/50 rounded-full p-2"
               onClick={closeLightbox}
             >
-              <X className="h-8 w-8" />
+              <X className="h-6 w-6" />
             </button>
+
+            {/* Image Counter */}
+            <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 text-white text-sm bg-black/70 px-4 py-2 rounded-full">
+              {current} / {count}
+            </div>
 
             {/* Carousel Container */}
             <motion.div
-              className="relative w-full h-full flex items-center justify-center p-8"
+              className="relative w-full md:h-full flex items-center justify-center md:flex md:items-center md:justify-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -183,52 +179,62 @@ export default function ProjectGallery({
               onClick={(e) => e.stopPropagation()}
             >
               <Carousel 
-                className="w-full max-w-4xl"
-                setApi={setCarouselApi}
+                setApi={setApi}
+                className="w-full h-full max-w-[95vw] max-h-[95vh]"
                 opts={{
                   align: "center",
                   loop: true,
-                  startIndex: currentImageIndex,
-                  duration: 15,
-                  dragFree: true,
+                  skipSnaps: false,
+                  dragFree: false,
+                  startIndex: selectedImageIndex,
                 }}
               >
-                <CarouselContent className="-ml-2 md:-ml-4">
+                <CarouselContent className="h-full -ml-0">
                   {images.map((image, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 flex items-center justify-center">
-                      <div className="relative w-full aspect-square max-w-[70vw] max-h-[70vh] transition-transform duration-300 ease-out">
+                    <CarouselItem key={index} className="h-full flex items-center justify-center pl-0">
+                      <div className="relative w-full h-full flex items-center justify-center p-2 md:p-4">
                         <Image
                           src={image.src}
                           alt={image.alt}
-                          fill
-                          className="object-contain rounded-lg"
-                          priority={index === currentImageIndex}
+                          width={1200}
+                          height={800}
+                          className="object-contain max-w-full max-h-full rounded-lg"
+                          priority={index === current - 1}
                         />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 hover:text-white" />
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 hover:text-white" />
+                
+                {/* Navigation Arrows - Hidden on mobile */}
+                <button
+                  className="hidden md:block absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-all duration-200"
+                  onClick={() => api?.scrollPrev()}
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                
+                <button
+                  className="hidden md:block absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-all duration-200"
+                  onClick={() => api?.scrollNext()}
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </Carousel>
+
+              {/* Image Info */}
+              {images[current - 1]?.title && (
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 text-center">
+                  <p className="text-white text-lg font-medium bg-black/70 px-6 py-3 rounded-lg">
+                    {images[current - 1].title}
+                  </p>
+                </div>
+              )}
             </motion.div>
-
-            {/* Image Info */}
-            {images[currentImageIndex].title && (
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center">
-                <p className="text-white text-lg font-medium">
-                  {images[currentImageIndex].title}
-                </p>
-                <p className="text-gray-300 text-sm">
-                  {currentImageIndex + 1} / {images.length}
-                </p>
-              </div>
-            )}
-
-            {/* Image Counter */}
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white text-sm">
-              {currentImageIndex + 1} / {images.length}
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

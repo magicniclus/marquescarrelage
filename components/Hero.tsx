@@ -80,7 +80,7 @@ export default function Hero({
   };
 
   return (
-    <section className="relative min-h-screen md:h-[calc(100vh-81px)] flex items-center overflow-hidden md:py-0 py-40">
+    <section className="relative min-h-screen md:min-h-[calc(100vh-80px)] md:h-[calc(100vh-81px)] flex items-center overflow-hidden md:py-0 py-40">
       {/* Background */}
       <div 
         className="absolute inset-0 z-0"

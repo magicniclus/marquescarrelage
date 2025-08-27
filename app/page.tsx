@@ -138,7 +138,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <ServicesSection cards={servicesData} />
+      <LogoCarousel logos={partnerLogos} speed={30} />
       <AboutSection
         smallTitle="Notre expertise"
         title="Plus de 10 ans d'expérience"
@@ -149,8 +149,7 @@ export default function Home() {
         buttonText="Demander un devis gratuit"
         buttonHref="#contact"
       />
-      <TeamSection members={teamMembers} />
-      <LogoCarousel logos={partnerLogos} speed={30} />
+      <ServicesSection cards={servicesData} />
       <ProjectGallery images={galleryImages} />
       <AboutSection
         smallTitle="Notre engagement"
@@ -163,6 +162,7 @@ export default function Home() {
         buttonHref="#garanties"
         reversed={true}
       />
+      <TeamSection members={teamMembers} />
       <ContactSection contactInfo={contactInfo} />
 
       {/* Exit Intent Popup */}
