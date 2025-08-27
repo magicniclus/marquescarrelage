@@ -2,28 +2,27 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-interface Logo {
-  src: string;
-  alt: string;
-  name: string;
-}
+import { PartnersConfig, PartnerLogo } from '@/lib/config';
 
 interface LogoCarouselProps {
+  config?: PartnersConfig;
   title?: string;
   subtitle?: string;
-  logos: Logo[];
+  logos?: PartnerLogo[];
   speed?: number;
 }
 
 export default function LogoCarousel({
+  config,
   title = "Nos Partenaires",
   subtitle = "Ils nous font confiance",
-  logos,
+  logos = [],
   speed = 50
 }: LogoCarouselProps) {
+  // Use config values if provided, otherwise fall back to props or defaults
+  const partnerLogos = config?.logos || logos;
   // Duplicate logos for seamless loop
-  const duplicatedLogos = [...logos, ...logos];
+  const duplicatedLogos = [...partnerLogos, ...partnerLogos];
 
   return (
     <section className="py-16 md:py-24 bg-white overflow-hidden">
