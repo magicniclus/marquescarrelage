@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Building, Mail, Phone, Calendar } from 'lucide-react';
+import { config } from '@/lib/config';
 
 export default function MentionsLegalesPage() {
   return (
@@ -49,11 +50,11 @@ export default function MentionsLegalesPage() {
               </div>
               
               <div className="space-y-4 text-gray-600">
-                <p><strong>Raison sociale :</strong> TrouverMonChantier SAS</p>
-                <p><strong>Siège social :</strong> 123 Avenue des Champs-Élysées, 75008 Paris, France</p>
+                <p><strong>Raison sociale :</strong> {config.company.legalName}</p>
+                <p><strong>Siège social :</strong> {config.company.address}</p>
                 <p><strong>Capital social :</strong> 50 000 €</p>
-                <p><strong>RCS :</strong> Paris B 123 456 789</p>
-                <p><strong>SIRET :</strong> 123 456 789 00012</p>
+                <p><strong>RCS :</strong> Paris B {config.company.siret}</p>
+                <p><strong>SIRET :</strong> {config.company.siret}</p>
                 <p><strong>Code APE :</strong> 6201Z</p>
                 <p><strong>TVA intracommunautaire :</strong> FR12 123456789</p>
               </div>
@@ -63,8 +64,8 @@ export default function MentionsLegalesPage() {
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Directeur de publication</h2>
               <div className="space-y-4 text-gray-600">
-                <p><strong>Nom :</strong> Pierre Martin</p>
-                <p><strong>Qualité :</strong> Président de TrouverMonChantier SAS</p>
+                <p><strong>Nom :</strong> {config.company.ceo}</p>
+                <p><strong>Qualité :</strong> Président de {config.company.legalName}</p>
               </div>
             </div>
 
@@ -80,9 +81,9 @@ export default function MentionsLegalesPage() {
               </div>
               
               <div className="space-y-4 text-gray-600">
-                <p><strong>Adresse :</strong> 123 Avenue des Champs-Élysées, 75008 Paris, France</p>
-                <p><strong>Téléphone :</strong> <a href="tel:0123456789" className="text-gray-600 hover:text-gray-800 transition-colors">01 23 45 67 89</a></p>
-                <p><strong>Email :</strong> <a href="mailto:contact@trouvermonchantier.fr" className="text-gray-600 hover:text-gray-800 transition-colors">contact@trouvermonchantier.fr</a></p>
+                <p><strong>Adresse :</strong> {config.company.address}</p>
+                <p><strong>Téléphone :</strong> <a href={`tel:${config.company.phone.replace(/\s/g, '')}`} className="text-gray-600 hover:text-gray-800 transition-colors">{config.company.phone}</a></p>
+                <p><strong>Email :</strong> <a href={`mailto:${config.company.email}`} className="text-gray-600 hover:text-gray-800 transition-colors">{config.company.email}</a></p>
               </div>
             </div>
 
@@ -124,7 +125,7 @@ export default function MentionsLegalesPage() {
                 </p>
                 <p>
                   Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email 
-                  à l'adresse <a href="mailto:contact@trouvermonchantier.fr" className="text-gray-600 hover:text-gray-800 transition-colors">contact@trouvermonchantier.fr</a> 
+                  à l'adresse <a href={`mailto:${config.company.email}`} className="text-gray-600 hover:text-gray-800 transition-colors">{config.company.email}</a> 
                   en décrivant le problème de la manière la plus précise possible.
                 </p>
                 <p>
@@ -139,10 +140,10 @@ export default function MentionsLegalesPage() {
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   Les sites internet peuvent offrir des liens vers d'autres sites internet ou d'autres ressources disponibles sur Internet. 
-                  TrouverMonChantier SAS ne dispose d'aucun moyen pour contrôler les sites en connexion avec ses sites internet.
+                  {config.company.legalName} ne dispose d'aucun moyen pour contrôler les sites en connexion avec ses sites internet.
                 </p>
                 <p>
-                  TrouverMonChantier SAS ne répond pas de la disponibilité de tels sites et sources externes, ni ne la garantit. 
+                  {config.company.legalName} ne répond pas de la disponibilité de tels sites et sources externes, ni ne la garantit. 
                   Elle ne peut être tenue pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes.
                 </p>
               </div>
@@ -157,7 +158,7 @@ export default function MentionsLegalesPage() {
                   la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.
                 </p>
                 <p>
-                  Sur le site <strong>trouvermonchantier.fr</strong>, TrouverMonChantier SAS ne collecte des informations personnelles 
+                  Sur le site <strong>{config.company.name.toLowerCase().replace(/\s/g, '')}.fr</strong>, {config.company.legalName} ne collecte des informations personnelles 
                   relatives à l'utilisateur que pour le besoin de certains services proposés par le site. 
                   L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie.
                 </p>
@@ -167,7 +168,7 @@ export default function MentionsLegalesPage() {
                   aux données personnelles le concernant.
                 </p>
                 <p>
-                  Pour l'exercer, adressez-vous à : <a href="mailto:contact@trouvermonchantier.fr" className="text-gray-600 hover:text-gray-800 transition-colors">contact@trouvermonchantier.fr</a>
+                  Pour l'exercer, adressez-vous à : <a href={`mailto:${config.company.email}`} className="text-gray-600 hover:text-gray-800 transition-colors">{config.company.email}</a>
                 </p>
               </div>
             </div>
@@ -177,7 +178,7 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Cookies</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Le site <strong>trouvermonchantier.fr</strong> peut être amené à vous demander l'acceptation de cookies pour des besoins de statistiques et d'affichage. 
+                  Le site <strong>{config.company.name.toLowerCase().replace(/\s/g, '')}.fr</strong> peut être amené à vous demander l'acceptation de cookies pour des besoins de statistiques et d'affichage. 
                   Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez.
                 </p>
                 <p>
