@@ -3,9 +3,12 @@
 import { motion } from 'framer-motion';
 import { Check, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 
 import { HeroConfig } from '@/lib/config';
+import { submitFormToFirebase, validateFormData, FormData } from '@/lib/firebase-service';
+import FormLoader from '@/components/FormLoader';
 
 interface HeroProps {
   config?: HeroConfig;
@@ -37,14 +40,19 @@ export default function Hero({
   const heroButtonHref = config?.buttonHref || "#contact";
   const heroBackgroundImage = config?.backgroundImage || backgroundImage;
   const heroBackgroundVideo = config?.backgroundVideo || backgroundVideo;
-  const [formData, setFormData] = useState({
+  const router = useRouter();
+  const [formData, setFormData] = useState<FormData>({
     nom: '',
     prenom: '',
     email: '',
     telephone: '',
     motif: '',
-    rgpd: false
+    rgpd: false,
+    source: 'hero'
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loaderStage, setLoaderStage] = useState<'sending' | 'success' | 'redirecting'>('sending');
+  const [showLoader, setShowLoader] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -55,19 +63,37 @@ export default function Hero({
   };
 
   const isFormValid = () => {
-    return formData.nom && 
-           formData.prenom && 
-           formData.email && 
-           formData.telephone && 
-           formData.motif && 
-           formData.rgpd;
+    return validateFormData(formData);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isFormValid()) {
-      console.log('Form submitted:', formData);
-      // Handle form submission here
+    if (!isFormValid() || isSubmitting) return;
+
+    setIsSubmitting(true);
+    setShowLoader(true);
+    setLoaderStage('sending');
+
+    try {
+      const docId = await submitFormToFirebase(formData);
+      console.log('Form submitted successfully:', docId);
+      
+      // Show success stage
+      setLoaderStage('success');
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Show redirecting stage
+      setLoaderStage('redirecting');
+      await new Promise(resolve => setTimeout(resolve, 800));
+      
+      // Redirect to thank you page
+      router.push('/merci');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setShowLoader(false);
+      // Could add error handling here if needed
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -295,9 +321,9 @@ export default function Hero({
               {/* Submit Button */}
               <Button
                 type="submit"
-                disabled={!isFormValid()}
+                disabled={!isFormValid() || isSubmitting}
                 className={`w-full py-3 text-white font-semibold rounded-lg transition-all duration-300 ${
-                  isFormValid()
+                  isFormValid() && !isSubmitting
                     ? 'bg-orange-500 hover:bg-orange-600 shadow-lg hover:shadow-xl'
                     : 'bg-gray-300 cursor-not-allowed'
                 }`}
@@ -308,6 +334,9 @@ export default function Hero({
           </motion.div>
         </div>
       </div>
+
+      {/* Form Loader */}
+      <FormLoader isVisible={showLoader} stage={loaderStage} />
 
       {/* Floating Scroll Indicator */}
       <motion.div

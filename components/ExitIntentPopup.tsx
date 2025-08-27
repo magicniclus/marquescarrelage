@@ -2,14 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import { X, Calendar, User, Phone, Mail, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { submitFormToFirebase, FormData } from '@/lib/firebase-service';
+import FormLoader from '@/components/FormLoader';
 
 interface ExitIntentPopupProps {
   onClose: () => void;
 }
 
 export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,6 +22,8 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loaderStage, setLoaderStage] = useState<'sending' | 'success' | 'redirecting'>('sending');
+  const [showLoader, setShowLoader] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -29,22 +35,45 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
     setIsSubmitting(true);
+    setShowLoader(true);
+    setLoaderStage('sending');
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-    
-    setIsSubmitting(false);
-    alert('Votre demande de rendez-vous a été envoyée avec succès !');
-    onClose();
+    try {
+      // Convert popup form data to Firebase format
+      const firebaseFormData: FormData = {
+        nom: formData.name.split(' ')[1] || formData.name,
+        prenom: formData.name.split(' ')[0] || '',
+        email: formData.email,
+        telephone: formData.phone || 'Non renseigné',
+        motif: formData.message || 'Demande de contact via popup',
+        rgpd: true, // Implicit consent for popup
+        source: 'popup'
+      };
+
+      const docId = await submitFormToFirebase(firebaseFormData);
+      console.log('Popup form submitted successfully:', docId);
+      
+      // Show success stage
+      setLoaderStage('success');
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Show redirecting stage
+      setLoaderStage('redirecting');
+      await new Promise(resolve => setTimeout(resolve, 800));
+      
+      // Close popup and redirect
+      onClose();
+      router.push('/merci');
+    } catch (error) {
+      console.error('Error submitting popup form:', error);
+      setShowLoader(false);
+      // Could add error handling here if needed
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Close on escape key and prevent body scroll
@@ -189,20 +218,13 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
 
             <Button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !formData.name || !formData.email}
               className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
             >
-              {isSubmitting ? (
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                  <span>Envoi en cours...</span>
-                </div>
-              ) : (
-                <div className="flex items-center justify-center space-x-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>Prendre rendez-vous</span>
-                </div>
-              )}
+              <div className="flex items-center justify-center space-x-2">
+                <Calendar className="h-4 w-4" />
+                <span>Prendre rendez-vous</span>
+              </div>
             </Button>
           </form>
 
@@ -213,6 +235,9 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
           </div>
         </div>
       </motion.div>
+      
+      {/* Form Loader */}
+      <FormLoader isVisible={showLoader} stage={loaderStage} />
     </motion.div>
   );
 }
