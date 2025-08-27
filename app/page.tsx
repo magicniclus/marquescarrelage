@@ -5,11 +5,12 @@ import Hero from '@/components/Hero';
 import ServicesSection from '@/components/ServicesSection';
 import AboutSection from '@/components/AboutSection';
 import TeamSection from '@/components/TeamSection';
-import LogoCarousel from '@/components/LogoCarousel';
 import ProjectGallery from '@/components/ProjectGallery';
 import ContactSection from '@/components/ContactSection';
+import LogoCarousel from '@/components/LogoCarousel';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 import { useExitIntent } from '@/hooks/useExitIntent';
+import { config } from '@/lib/config';
 
 export default function Home() {
   const { showExitIntent, closeExitIntent } = useExitIntent({
@@ -137,32 +138,33 @@ export default function Home() {
 
   return (
     <div>
-      <Hero />
-      <LogoCarousel logos={partnerLogos} speed={30} />
+      <Hero config={config.hero} />
+      <LogoCarousel config={config.partners} speed={30} />
       <AboutSection
-        smallTitle="Notre expertise"
-        title="Plus de 10 ans d'expérience"
-        subtitle="Des professionnels à votre service"
-        content="Nous mettons en relation les particuliers avec les meilleurs artisans et entrepreneurs de leur région. Notre réseau de professionnels qualifiés et certifiés vous garantit des travaux de qualité, dans les délais et au meilleur prix. Faites confiance à notre expertise pour tous vos projets de construction et rénovation."
-        gradientFrom="#ff7e5f"
-        gradientTo="#feb47b"
-        buttonText="Demander un devis gratuit"
-        buttonHref="#contact"
+        smallTitle={config.about.sections[0].smallTitle}
+        title={config.about.sections[0].title}
+        subtitle={config.about.sections[0].subtitle}
+        content={config.about.sections[0].content}
+        gradientFrom={config.about.sections[0].gradientFrom}
+        gradientTo={config.about.sections[0].gradientTo}
+        buttonText={config.about.sections[0].buttonText}
+        buttonHref={config.about.sections[0].buttonHref}
+        reversed={config.about.sections[0].reversed}
       />
       <ServicesSection cards={servicesData} />
-      <ProjectGallery images={galleryImages} />
+      <ProjectGallery config={config.gallery} />
       <AboutSection
-        smallTitle="Notre engagement"
-        title="Qualité et satisfaction garanties"
-        subtitle="Un suivi personnalisé de A à Z"
-        content="Chaque projet est unique et mérite une attention particulière. Notre équipe vous accompagne à chaque étape, de la conception à la réalisation. Nous sélectionnons rigoureusement nos partenaires artisans pour vous offrir un service d'excellence et des résultats à la hauteur de vos attentes."
-        gradientFrom="#667eea"
-        gradientTo="#764ba2"
-        buttonText="Découvrir nos garanties"
-        buttonHref="#garanties"
-        reversed={true}
+        smallTitle={config.about.sections[1].smallTitle}
+        title={config.about.sections[1].title}
+        subtitle={config.about.sections[1].subtitle}
+        content={config.about.sections[1].content}
+        gradientFrom={config.about.sections[1].gradientFrom}
+        gradientTo={config.about.sections[1].gradientTo}
+        buttonText={config.about.sections[1].buttonText}
+        buttonHref={config.about.sections[1].buttonHref}
+        reversed={config.about.sections[1].reversed}
       />
-      <TeamSection members={teamMembers} />
+      <TeamSection config={config.team} />
       <ContactSection contactInfo={contactInfo} />
 
       {/* Exit Intent Popup */}
