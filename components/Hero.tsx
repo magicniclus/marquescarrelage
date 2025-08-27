@@ -5,7 +5,10 @@ import { Check, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
+import { HeroConfig } from '@/lib/config';
+
 interface HeroProps {
+  config?: HeroConfig;
   backgroundImage?: string;
   backgroundVideo?: string;
   title?: string;
@@ -15,6 +18,7 @@ interface HeroProps {
 }
 
 export default function Hero({
+  config,
   backgroundImage,
   backgroundVideo,
   title = "Trouvez le professionnel idéal pour vos travaux",
@@ -26,6 +30,13 @@ export default function Hero({
   ],
   googleReviewsWidget
 }: HeroProps) {
+  // Use config values if provided, otherwise fall back to props or defaults
+  const heroTitle = config?.title || title;
+  const heroSubtitle = config?.subtitle || description;
+  const heroButtonText = config?.buttonText || "Demander un devis";
+  const heroButtonHref = config?.buttonHref || "#contact";
+  const heroBackgroundImage = config?.backgroundImage || backgroundImage;
+  const heroBackgroundVideo = config?.backgroundVideo || backgroundVideo;
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',
@@ -62,12 +73,12 @@ export default function Hero({
 
   // Background styles
   const getBackgroundStyle = () => {
-    if (backgroundVideo) {
+    if (heroBackgroundVideo) {
       return {};
     }
-    if (backgroundImage) {
+    if (heroBackgroundImage) {
       return {
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${heroBackgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -86,7 +97,7 @@ export default function Hero({
         className="absolute inset-0 z-0"
         style={getBackgroundStyle()}
       >
-        {backgroundVideo && (
+        {heroBackgroundVideo && (
           <video
             autoPlay
             muted
@@ -94,7 +105,7 @@ export default function Hero({
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src={backgroundVideo} type="video/mp4" />
+            <source src={heroBackgroundVideo} type="video/mp4" />
           </video>
         )}
         {/* Overlay */}
@@ -118,7 +129,7 @@ export default function Hero({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              {title}
+              {heroTitle}
             </motion.h1>
 
             {/* Description */}
@@ -128,7 +139,7 @@ export default function Hero({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              {description}
+              {heroSubtitle}
             </motion.p>
 
             {/* Bullet Points */}
