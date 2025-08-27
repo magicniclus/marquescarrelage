@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FileText, Shield, AlertCircle, Calendar } from 'lucide-react';
+import { config } from '@/lib/config';
 
 export default function CGVPage() {
   return (
@@ -51,9 +52,9 @@ export default function CGVPage() {
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre 
-                  TrouverMonChantier SAS, société par actions simplifiée au capital de 50 000 €, immatriculée au RCS de Paris 
-                  sous le numéro B 123 456 789, dont le siège social est situé 123 Avenue des Champs-Élysées, 75008 Paris, France, 
-                  ci-après dénommée « TrouverMonChantier » ou « la Société », et toute personne physique ou morale, 
+                  {config.company.legalName}, société par actions simplifiée au capital de 50 000 €, immatriculée au RCS de Paris 
+                  sous le numéro B {config.company.siret}, dont le siège social est situé {config.company.address}, 
+                  ci-après dénommée « {config.company.name} » ou « la Société », et toute personne physique ou morale, 
                   ci-après dénommée « le Client », souhaitant bénéficier des services proposés par TrouverMonChantier.
                 </p>
                 <p>
@@ -68,7 +69,7 @@ export default function CGVPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Article 1 - Objet</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  TrouverMonChantier est une plateforme de mise en relation entre particuliers et professionnels du bâtiment. 
+                  {config.company.name} est une plateforme de mise en relation entre particuliers et professionnels du bâtiment. 
                   La Société propose les services suivants :
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
@@ -91,7 +92,7 @@ export default function CGVPage() {
                 </p>
                 <p>
                   Le devis est valable 30 jours à compter de sa date d'émission. Passé ce délai, 
-                  TrouverMonChantier se réserve le droit de modifier les prix proposés.
+                  {config.company.name} se réserve le droit de modifier les prix proposés.
                 </p>
                 <p>
                   L'acceptation du devis par le Client, matérialisée par sa signature et le versement de l'acompte éventuel, 
@@ -136,7 +137,7 @@ export default function CGVPage() {
                   d'intempéries exceptionnelles ou de modifications demandées par le Client.
                 </p>
                 <p>
-                  En cas de retard imputable à TrouverMonChantier, le Client pourra demander l'application de pénalités 
+                  En cas de retard imputable à {config.company.name}, le Client pourra demander l'application de pénalités 
                   de retard fixées à 0,1% du montant TTC des travaux par jour de retard.
                 </p>
               </div>
@@ -155,7 +156,7 @@ export default function CGVPage() {
               
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  TrouverMonChantier garantit la conformité des travaux réalisés selon les règles de l'art et 
+                  {config.company.name} garantit la conformité des travaux réalisés selon les règles de l'art et 
                   les normes en vigueur. Les garanties légales s'appliquent :
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
@@ -174,15 +175,15 @@ export default function CGVPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Article 6 - Responsabilité</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  TrouverMonChantier s'engage à mettre en œuvre tous les moyens nécessaires pour assurer 
+                  {config.company.name} s'engage à mettre en œuvre tous les moyens nécessaires pour assurer 
                   la bonne exécution des travaux confiés aux artisans partenaires.
                 </p>
                 <p>
-                  La responsabilité de TrouverMonChantier ne peut être engagée qu'en cas de faute prouvée 
+                  La responsabilité de {config.company.name} ne peut être engagée qu'en cas de faute prouvée 
                   dans la sélection ou le suivi des artisans partenaires.
                 </p>
                 <p>
-                  En aucun cas, TrouverMonChantier ne pourra être tenue responsable des dommages indirects 
+                  En aucun cas, {config.company.name} ne pourra être tenue responsable des dommages indirects 
                   tels que perte d'exploitation, perte de clientèle, trouble commercial quelconque.
                 </p>
               </div>
@@ -222,7 +223,7 @@ export default function CGVPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Article 8 - Protection des données personnelles</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  TrouverMonChantier s'engage à respecter la réglementation en vigueur applicable au traitement 
+                  {config.company.name} s'engage à respecter la réglementation en vigueur applicable au traitement 
                   des données personnelles, notamment le Règlement Général sur la Protection des Données (RGPD).
                 </p>
                 <p>
@@ -232,7 +233,7 @@ export default function CGVPage() {
                 <p>
                   Le Client dispose d'un droit d'accès, de rectification, de suppression et de portabilité 
                   de ses données personnelles qu'il peut exercer en contactant : 
-                  <a href="mailto:contact@trouvermonchantier.fr" className="text-gray-600 hover:text-gray-800 transition-colors"> contact@trouvermonchantier.fr</a>
+                  <a href={`mailto:${config.company.email}`} className="text-gray-600 hover:text-gray-800 transition-colors"> {config.company.email}</a>
                 </p>
               </div>
             </div>
@@ -247,7 +248,7 @@ export default function CGVPage() {
                 </p>
                 <p>
                   Pour les litiges de consommation, le Client peut recourir gratuitement au service de médiation 
-                  de la consommation dont relève TrouverMonChantier ou à tout autre médiateur de la consommation.
+                  de la consommation dont relève {config.company.name} ou à tout autre médiateur de la consommation.
                 </p>
                 <p>
                   Les présentes CGV sont soumises au droit français. En cas de litige, 
@@ -266,12 +267,12 @@ export default function CGVPage() {
                   les autres stipulations garderont toute leur force et leur portée.
                 </p>
                 <p>
-                  TrouverMonChantier se réserve le droit de modifier les présentes CGV à tout moment. 
+                  {config.company.name} se réserve le droit de modifier les présentes CGV à tout moment. 
                   Les CGV applicables sont celles en vigueur à la date de la commande.
                 </p>
                 <p>
-                  Pour toute question relative aux présentes CGV, le Client peut contacter TrouverMonChantier 
-                  à l'adresse suivante : <a href="mailto:contact@trouvermonchantier.fr" className="text-gray-600 hover:text-gray-800 transition-colors">contact@trouvermonchantier.fr</a>
+                  Pour toute question relative aux présentes CGV, le Client peut contacter {config.company.name} 
+                  à l'adresse suivante : <a href={`mailto:${config.company.email}`} className="text-gray-600 hover:text-gray-800 transition-colors">{config.company.email}</a>
                 </p>
               </div>
             </div>
