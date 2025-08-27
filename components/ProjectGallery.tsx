@@ -11,35 +11,37 @@ import {
   CarouselItem,
   type CarouselApi,
 } from '@/components/ui/carousel';
-
-interface GalleryImage {
-  src: string;
-  alt: string;
-  title?: string;
-}
+import { GalleryConfig, GalleryImage } from '@/lib/config';
 
 interface ProjectGalleryProps {
+  config?: GalleryConfig;
   title?: string;
   subtitle?: string;
-  images: GalleryImage[];
+  images?: GalleryImage[];
   initialDisplayCount?: number;
 }
 
 export default function ProjectGallery({
+  config,
   title = "Nos Réalisations",
   subtitle = "Découvrez quelques-uns de nos projets récents",
-  images,
+  images = [],
   initialDisplayCount = 4
 }: ProjectGalleryProps) {
-  const [displayCount, setDisplayCount] = useState(initialDisplayCount);
+  // Use config values if provided, otherwise fall back to props or defaults
+  const galleryTitle = config?.title || title;
+  const gallerySubtitle = config?.subtitle || subtitle;
+  const galleryImages = config?.images || images;
+  const galleryInitialDisplayCount = config?.initialDisplayCount || initialDisplayCount;
+  const [displayCount, setDisplayCount] = useState(galleryInitialDisplayCount);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const displayedImages = images.slice(0, displayCount);
-  const hasMoreImages = displayCount < images.length;
+  const displayedImages = galleryImages.slice(0, displayCount);
+  const hasMoreImages = displayCount < galleryImages.length;
 
   const openLightbox = (index: number) => {
     setSelectedImageIndex(index);
@@ -87,11 +89,11 @@ export default function ProjectGallery({
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              {title}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {galleryTitle}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {subtitle}
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              {gallerySubtitle}
             </p>
           </motion.div>
 
@@ -189,8 +191,8 @@ export default function ProjectGallery({
                   startIndex: selectedImageIndex,
                 }}
               >
-                <CarouselContent className="h-full -ml-0">
-                  {images.map((image, index) => (
+                <CarouselContent className="-ml-1">
+                  {galleryImages.map((image, index) => (
                     <CarouselItem key={index} className="h-full flex items-center justify-center pl-0">
                       <div className="relative w-full h-full flex items-center justify-center p-2 md:p-4">
                         <Image
@@ -227,10 +229,10 @@ export default function ProjectGallery({
               </Carousel>
 
               {/* Image Info */}
-              {images[current - 1]?.title && (
+              {galleryImages[current - 1]?.title && (
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 text-center">
                   <p className="text-white text-lg font-medium bg-black/70 px-6 py-3 rounded-lg">
-                    {images[current - 1].title}
+                    {galleryImages[current - 1].title}
                   </p>
                 </div>
               )}
