@@ -19,6 +19,7 @@ interface ProjectGalleryProps {
   subtitle?: string;
   images?: GalleryImage[];
   initialDisplayCount?: number;
+  id?: string;
 }
 
 export default function ProjectGallery({
@@ -26,7 +27,8 @@ export default function ProjectGallery({
   title = "Nos Réalisations",
   subtitle = "Découvrez quelques-uns de nos projets récents",
   images = [],
-  initialDisplayCount = 4
+  initialDisplayCount = 4,
+  id
 }: ProjectGalleryProps) {
   // Use config values if provided, otherwise fall back to props or defaults
   const galleryTitle = config?.title || title;
@@ -79,7 +81,7 @@ export default function ProjectGallery({
 
   return (
     <>
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section id={id} className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div

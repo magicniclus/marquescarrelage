@@ -16,12 +16,14 @@ interface ServicesSectionProps {
   title?: string;
   subtitle?: string;
   cards: ServiceCard[];
+  id?: string;
 }
 
 export default function ServicesSection({
   title = "Nos Services",
   subtitle = "Découvrez notre gamme complète de prestations",
-  cards
+  cards,
+  id
 }: ServicesSectionProps) {
   const getBackgroundStyle = (card: ServiceCard) => {
     if (card.image) {
@@ -33,7 +35,7 @@ export default function ServicesSection({
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section id={id} className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

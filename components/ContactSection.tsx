@@ -19,8 +19,8 @@ interface ContactSectionProps {
 }
 
 export default function ContactSection({
-  title = "Nous Trouver",
-  subtitle = "Venez nous rencontrer dans nos bureaux",
+  title = "Contactez-nous",
+  subtitle = "Parlons de votre projet ensemble",
   contactInfo
 }: ContactSectionProps) {
   return (
@@ -51,7 +51,7 @@ export default function ContactSection({
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Informations de Contact</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Nos Coordonnées</h3>
             
             {/* Address */}
             <motion.div
@@ -63,7 +63,7 @@ export default function ContactSection({
                 <MapPin className="h-6 w-6 text-gray-600" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">Adresse</h4>
+                <h4 className="font-semibold text-gray-900 mb-1">Zone d'intervention</h4>
                 <p className="text-gray-600 leading-relaxed">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -144,7 +144,7 @@ export default function ContactSection({
                   }
                 }}
               >
-                Demander un Devis Gratuit
+                Demander un Devis
               </Button>
             </motion.div>
           </motion.div>

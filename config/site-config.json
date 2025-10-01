@@ -1,77 +1,89 @@
 {
   "company": {
-    "name": "Trouver Mon Chantier",
-    "legalName": "Trouver Mon Chantier SARL",
-    "address": "123 Rue de la Construction, 75001 Paris",
-    "phone": "01 23 45 67 89",
-    "email": "service@trouver-mon-chantier.fr",
-    "siret": "12345678901234",
-    "ceo": "Jean Dupont"
+    "name": "Belrhali",
+    "legalName": "Belrhali",
+    "address": "Secteurs d'activité : Corrèze, Dordogne, Haute-Vienne, Lot, Gironde, Lot-et-Garonne",
+    "phone": "06 82 65 45 76",
+    "email": "contact@belrhali.fr",
+    "siret": "",
+    "ceo": "Hicham Belrhali"
   },
   "hero": {
-    "title": "Trouvez les meilleurs artisans près de chez vous",
-    "subtitle": "Nous mettons en relation particuliers et professionnels pour tous vos projets de construction et rénovation",
-    "buttonText": "Trouver un artisan",
+    "title": "Belrhali - Artisan du bâtiment",
+    "subtitle": "Spécialiste en maçonnerie, terrassement et menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Nouvelle-Aquitaine.",
+    "buttonText": "Demander un devis",
     "buttonHref": "#contact",
-    "backgroundImage": null,
-    "backgroundVideo": null
+    "backgroundImage": "/maison-hero.png",
+    "backgroundVideo": ""
   },
   "about": {
     "sections": [
       {
         "smallTitle": "Notre expertise",
-        "title": "Plus de 10 ans d'expérience",
-        "subtitle": "Des professionnels à votre service",
-        "content": "Nous mettons en relation les particuliers avec les meilleurs artisans et entrepreneurs de leur région. Notre réseau de professionnels qualifiés et certifiés vous garantit des travaux de qualité, dans les délais et au meilleur prix. Faites confiance à notre expertise pour tous vos projets de construction et rénovation.",
+        "title": "Maçonnerie et terrassement",
+        "subtitle": "Des fondations solides pour vos projets",
+        "content": "Spécialisés dans la maçonnerie traditionnelle et moderne, on réalise tous vos travaux de gros œuvre : fondations, murs porteurs, cloisons, dalles. Notre expertise en terrassement garantit une préparation parfaite de vos terrains pour tout type de construction ou d'aménagement extérieur.",
+        "image": "/maison-1.png",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
-        "buttonText": "Demander un devis gratuit",
-        "buttonHref": "#contact",
+        "buttonText": "Voir nos réalisations",
+        "buttonHref": "#realisations",
         "reversed": false
       },
       {
-        "smallTitle": "Notre engagement",
-        "title": "Qualité et satisfaction garanties",
-        "subtitle": "Un suivi personnalisé de A à Z",
-        "content": "Chaque projet est unique et mérite une attention particulière. Notre équipe vous accompagne à chaque étape, de la conception à la réalisation. Nous sélectionnons rigoureusement nos partenaires artisans pour vous offrir un service d'excellence et des résultats à la hauteur de vos attentes.",
+        "smallTitle": "Nos spécialités",
+        "title": "Menuiserie et rénovation",
+        "subtitle": "Confort et qualité sur mesure",
+        "content": "Notre compétence en menuiserie nous permet de vous offrir des solutions complètes pour améliorer votre habitat : fenêtres, portes, placards, escaliers. On réalise également vos travaux de rénovation intérieure et extérieure avec un souci du détail et de la finition.",
+        "image": "/maison-2.png",
         "gradientFrom": "#667eea",
         "gradientTo": "#764ba2",
-        "buttonText": "Découvrir nos garanties",
-        "buttonHref": "#garanties",
+        "buttonText": "Contactez-nous",
+        "buttonHref": "#contact",
         "reversed": true
       }
     ]
   },
   "gallery": {
     "title": "Nos Réalisations",
-    "subtitle": "Découvrez quelques-uns de nos projets récents",
+    "subtitle": "Découvrez nos derniers chantiers en Nouvelle-Aquitaine",
     "initialDisplayCount": 4,
     "images": [
       {
-        "src": "/images/cuisine-moderne.jpg",
-        "alt": "Cuisine moderne - Paris 16ème",
+        "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
+        "alt": "Rénovation cuisine moderne",
         "title": "Cuisine moderne - Paris 16ème"
       },
       {
-        "src": "/images/salle-de-bain.jpg",
-        "alt": "Salle de bain - Neuilly",
+        "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
+        "alt": "Salle de bain contemporaine",
         "title": "Salle de bain - Neuilly"
       },
       {
-        "src": "/images/extension-boulogne.jpg",
-        "alt": "Extension - Boulogne",
+        "src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=800&fit=crop",
+        "alt": "Extension maison",
         "title": "Extension - Boulogne"
       },
       {
-        "src": "/images/salon-design.jpg",
-        "alt": "Salon design - Levallois",
+        "src": "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=800&fit=crop",
+        "alt": "Rénovation salon",
         "title": "Salon design - Levallois"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
+        "alt": "Terrasse aménagée",
+        "title": "Terrasse - Vincennes"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
+        "alt": "Combles aménagés",
+        "title": "Combles - Saint-Cloud"
       }
     ]
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Parlons de votre projet"
+    "subtitle": "Parlons de votre projet ensemble"
   },
   "team": {
     "members": [

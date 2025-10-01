@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Phone } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,24 +30,30 @@ export default function Footer() {
             >
               <div className="flex items-center space-x-2">
                 <motion.div 
-                  className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
                   whileHover={{ rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <span className="text-primary-foreground font-bold text-xl">T</span>
+                  <Image 
+                    src="/logo.png" 
+                    alt="Logo" 
+                    width={40} 
+                    height={40} 
+                    className="object-contain"
+                  />
                 </motion.div>
                 <span className="text-xl font-bold">
-                  TrouverMonChantier
+                  Belrhali
                 </span>
               </div>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Trouvez facilement des professionnels qualifiés pour tous vos travaux de construction et de rénovation.
+                Entreprise spécialisée en maçonnerie, terrassement, menuiserie, pompes à chaleur et aménagement de combles. Certification RGE.
               </p>
               <a 
-                href="https://trouvermonchantier.fr" 
+                href="tel:0682654576" 
                 className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
               >
-                www.trouvermonchantier.fr
+                06 82 65 45 76
               </a>
             </motion.div>
 
@@ -85,11 +92,11 @@ export default function Footer() {
               <h3 className="text-lg font-semibold">Contact</h3>
               <div className="space-y-2">
                 <a 
-                  href="tel:0123456789"
+                  href="tel:0682654576"
                   className="text-slate-300 hover:text-white text-sm transition-colors duration-200 block flex items-center space-x-2"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>01 23 45 67 89</span>
+                  <span>06 82 65 45 76</span>
                 </a>
                 <p className="text-slate-400 text-xs">
                   Service gratuit 7j/7 de 9h à 19h
@@ -110,7 +117,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              © {currentYear} TrouverMonChantier. Tous droits réservés.
+              © {currentYear} Belrhali. Tous droits réservés.
             </motion.p>
 
             {/* Powered by */}

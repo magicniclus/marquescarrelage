@@ -2,26 +2,26 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, User } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
-  const phoneNumber = "01 23 45 67 89";
+  const phoneNumber = "06 82 65 45 76";
 
   const navigationLinks = [
-    { name: 'Prestations', href: '#prestations' },
-    { name: 'Qui sommes nous', href: '#about' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Mon expertise', href: '#expertise' },
+    { name: 'Services', href: '#services' },
+    { name: 'Mes réalisations', href: '#realisations' },
   ];
 
   // Prevent body scroll when mobile menu is open
@@ -66,16 +66,25 @@ export default function Navigation() {
             transition={{ duration: 0.7, delay: 0.2 }}
             whileHover={{ scale: 1.02 }}
           >
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <motion.div 
-                className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center shadow-lg"
+                className="w-12 h-12 rounded-xl bg-slate-700 flex items-center justify-center shadow-lg overflow-hidden"
                 whileHover={{ rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className="text-white font-bold text-xl">T</span>
+                <Image 
+                  src="/logo.png" 
+                  alt="Logo" 
+                  width={40} 
+                  height={40} 
+                  className="object-contain"
+                />
               </motion.div>
-              <span className="text-xl font-bold text-gray-900">TrouverMonChantier</span>
-            </a>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-gray-900">Belrhali</span>
+                <span className="text-xs text-gray-600 font-medium">maçonnerie - menuiserie</span>
+              </div>
+            </Link>
           </motion.div>
 
           {/* Navigation au centre - Desktop */}
@@ -200,15 +209,26 @@ export default function Navigation() {
             <div className="flex justify-between items-center p-6 border-b">
               <div className="flex items-center space-x-2">
                 <motion.div 
-                  className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
                   whileHover={{ rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <span className="text-primary-foreground font-bold text-xl">T</span>
+                  <Image 
+                    src="/logo.png" 
+                    alt="Logo" 
+                    width={40} 
+                    height={40} 
+                    className="object-contain"
+                  />
                 </motion.div>
-                <span className="text-xl font-bold text-foreground">
-                  TrouverMonChantier
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold text-foreground">
+                    Belrhali
+                  </span>
+                  <span className="text-xs text-gray-400 font-medium">
+                    maçonnerie - menuiserie
+                  </span>
+                </div>
               </div>
               <Button 
                 variant="ghost" 

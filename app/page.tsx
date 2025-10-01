@@ -20,120 +20,38 @@ export default function Home() {
   });
   const servicesData = [
     {
-      title: "Rénovation",
-      subtitle: "Intérieure & Extérieure",
-      content: "Transformez votre habitat avec nos artisans spécialisés en rénovation complète, de la cuisine à la salle de bain.",
+      title: "Maçonnerie",
+      subtitle: "Gros œuvre & Rénovation",
+      content: "Fondations, murs porteurs, cloisons, dalles béton. On réalise tous vos travaux de maçonnerie avec un savoir-faire traditionnel et des techniques modernes.",
+      image: "/macon.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b"
     },
     {
-      title: "Construction",
-      subtitle: "Neuve & Extension",
-      content: "Réalisez vos projets de construction avec notre réseau d'entrepreneurs qualifiés et certifiés.",
+      title: "Terrassement",
+      subtitle: "Préparation de terrain",
+      content: "Excavation, nivellement, drainage. On prépare vos terrains pour vos constructions et aménagements extérieurs avec précision.",
+      image: "/terrassement.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2"
+    },
+    {
+      title: "Menuiserie",
+      subtitle: "Sur mesure & Rénovation",
+      content: "Fenêtres, portes, placards, escaliers. On conçoit et installe vos menuiseries intérieures et extérieures selon vos besoins.",
+      image: "/menuiserie.png",
+      gradientFrom: "#10b981",
+      gradientTo: "#059669"
     }
   ];
 
-  const galleryImages = [
-    {
-      src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-      alt: "Rénovation cuisine moderne",
-      title: "Cuisine moderne - Paris 16ème"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-      alt: "Salle de bain contemporaine",
-      title: "Salle de bain - Neuilly"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=800&fit=crop",
-      alt: "Extension maison",
-      title: "Extension - Boulogne"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=800&fit=crop",
-      alt: "Rénovation salon",
-      title: "Salon design - Levallois"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-      alt: "Terrasse aménagée",
-      title: "Terrasse - Vincennes"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-      alt: "Combles aménagés",
-      title: "Combles - Saint-Cloud"
-    }
-  ];
 
-  const partnerLogos = [
-    {
-      src: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop",
-      alt: "Partenaire 1",
-      name: "Partner 1"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop",
-      alt: "Partenaire 2", 
-      name: "Partner 2"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=200&h=100&fit=crop",
-      alt: "Partenaire 3",
-      name: "Partner 3"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=100&fit=crop",
-      alt: "Partenaire 4",
-      name: "Partner 4"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&h=100&fit=crop",
-      alt: "Partenaire 5",
-      name: "Partner 5"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=200&h=100&fit=crop",
-      alt: "Partenaire 6",
-      name: "Partner 6"
-    }
-  ];
-
-  const teamMembers = [
-    {
-      name: "Nicolas Castéra",
-      position: "Directeur Général",
-      description: "Expert en gestion de projets avec plus de 15 ans d'expérience dans le bâtiment.",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "Marie Dubois",
-      position: "Responsable Commerciale",
-      description: "Spécialisée dans l'accompagnement client et la coordination des équipes d'artisans.",
-      photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "Pierre Martin",
-      position: "Chef de Projet",
-      description: "Architecte de formation, il supervise la qualité et le suivi de tous nos chantiers.",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "Sophie Laurent",
-      position: "Responsable Qualité",
-      description: "Garante de l'excellence de nos prestations et de la satisfaction de nos clients.",
-      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
-    }
-  ];
 
   const contactInfo = {
-    address: "123 Avenue des Champs-Élysées\n75008 Paris, France",
-    phone: "01 23 45 67 89",
-    email: "contact@trouvermonchantier.fr",
-    hours: "Lundi - Vendredi: 9h00 - 18h00\nSamedi: 9h00 - 12h00",
-    mapEmbedUrl: "https://maps.google.com/maps?q=123+Avenue+des+Champs-Élysées,75008+Paris,France&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    address: "Zones d'intervention :\nCorrèze (19), Dordogne (24), haute-Vienne (87)\nLot (46), Gironde (33), Lot-et-Garonne (47)",
+    phone: "06 82 65 45 76",
+    email: "contact@belrhali.fr",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Nouvelle-Aquitaine,France&t=&z=8&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -141,23 +59,26 @@ export default function Home() {
       <Hero config={config.hero} />
       <LogoCarousel config={config.partners} speed={30} />
       <AboutSection
+        id="expertise"
         smallTitle={config.about.sections[0].smallTitle}
         title={config.about.sections[0].title}
         subtitle={config.about.sections[0].subtitle}
         content={config.about.sections[0].content}
+        image={config.about.sections[0].image}
         gradientFrom={config.about.sections[0].gradientFrom}
         gradientTo={config.about.sections[0].gradientTo}
         buttonText={config.about.sections[0].buttonText}
         buttonHref={config.about.sections[0].buttonHref}
         reversed={config.about.sections[0].reversed}
       />
-      <ServicesSection cards={servicesData} />
-      <ProjectGallery config={config.gallery} />
+      <ServicesSection id="services" cards={servicesData} />
+      <ProjectGallery id="realisations" config={config.gallery} />
       <AboutSection
         smallTitle={config.about.sections[1].smallTitle}
         title={config.about.sections[1].title}
         subtitle={config.about.sections[1].subtitle}
         content={config.about.sections[1].content}
+        image={config.about.sections[1].image}
         gradientFrom={config.about.sections[1].gradientFrom}
         gradientTo={config.about.sections[1].gradientTo}
         buttonText={config.about.sections[1].buttonText}
@@ -165,7 +86,11 @@ export default function Home() {
         reversed={config.about.sections[1].reversed}
       />
       <TeamSection config={config.team} />
-      <ContactSection contactInfo={contactInfo} />
+      <ContactSection 
+        title="Contactez-nous"
+        subtitle="Parlons de votre projet de construction ou rénovation en Nouvelle-Aquitaine"
+        contactInfo={contactInfo} 
+      />
 
       {/* Exit Intent Popup */}
       <AnimatePresence>

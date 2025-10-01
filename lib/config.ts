@@ -24,6 +24,7 @@ export interface AboutSection {
   title: string;
   subtitle: string;
   content: string;
+  image?: string;
   gradientFrom: string;
   gradientTo: string;
   buttonText: string;
@@ -94,55 +95,59 @@ export interface SiteConfig {
 // Default configuration fallback
 const defaultConfig: SiteConfig = {
   company: {
-    name: "Trouver Mon Chantier",
-    legalName: "Trouver Mon Chantier SARL",
-    address: "123 Rue de la Construction, 75001 Paris",
-    phone: "01 23 45 67 89",
-    email: "contact@trouvermonchantier.fr",
-    siret: "12345678901234",
-    ceo: "Jean Dupont"
+    name: "Belrhali",
+    legalName: "Belrhali",
+    address: "Secteurs d'activité : Corrèze, Dordogne, Haute-Vienne, Lot, Gironde, Lot-et-Garonne",
+    phone: "06 82 65 45 76",
+    email: "contact@belrhali.fr",
+    siret: "",
+    ceo: "Hicham Belrhali"
   },
   hero: {
-    title: "Trouvez les meilleurs artisans près de chez vous",
-    subtitle: "Nous mettons en relation particuliers et professionnels pour tous vos projets de construction et rénovation",
-    buttonText: "Trouver un artisan",
-    buttonHref: "#contact"
+    title: "Belrhali - Artisan du bâtiment",
+    subtitle: "Spécialiste en maçonnerie, terrassement et menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Nouvelle-Aquitaine.",
+    buttonText: "Demander un devis",
+    buttonHref: "#contact",
+    backgroundImage: "/maison-hero.png",
+    backgroundVideo: ""
   },
   about: {
     sections: [
       {
         smallTitle: "Notre expertise",
-        title: "Plus de 10 ans d'expérience",
-        subtitle: "Des professionnels à votre service",
-        content: "Nous mettons en relation les particuliers avec les meilleurs artisans et entrepreneurs de leur région. Notre réseau de professionnels qualifiés et certifiés vous garantit des travaux de qualité, dans les délais et au meilleur prix. Faites confiance à notre expertise pour tous vos projets de construction et rénovation.",
+        title: "Maçonnerie et terrassement",
+        subtitle: "Des fondations solides pour vos projets",
+        content: "Spécialisés dans la maçonnerie traditionnelle et moderne, on réalise tous vos travaux de gros œuvre : fondations, murs porteurs, cloisons, dalles. Notre expertise en terrassement garantit une préparation parfaite de vos terrains pour tout type de construction ou d'aménagement extérieur.",
+        image: "/maison-1.png",
         gradientFrom: "#ff7e5f",
         gradientTo: "#feb47b",
-        buttonText: "Demander un devis gratuit",
-        buttonHref: "#contact",
+        buttonText: "Voir nos réalisations",
+        buttonHref: "#realisations",
         reversed: false
       },
       {
-        smallTitle: "Notre engagement",
-        title: "Qualité et satisfaction garanties",
-        subtitle: "Un suivi personnalisé de A à Z",
-        content: "Chaque projet est unique et mérite une attention particulière. Notre équipe vous accompagne à chaque étape, de la conception à la réalisation. Nous sélectionnons rigoureusement nos partenaires artisans pour vous offrir un service d'excellence et des résultats à la hauteur de vos attentes.",
+        smallTitle: "Nos spécialités",
+        title: "Menuiserie, PAC et combles",
+        subtitle: "Confort et économies d'énergie",
+        content: "Notre double compétence en menuiserie et installation de pompes à chaleur nous permet de vous offrir des solutions complètes pour améliorer votre habitat. On aménage également vos combles pour optimiser votre espace de vie. Certifiés RGE, bénéficiez des aides de l'État pour vos travaux d'économie d'énergie.",
+        image: "/maison-2.png",
         gradientFrom: "#667eea",
         gradientTo: "#764ba2",
-        buttonText: "Découvrir nos garanties",
-        buttonHref: "#garanties",
+        buttonText: "En savoir plus sur RGE",
+        buttonHref: "#contact",
         reversed: true
       }
     ]
   },
   gallery: {
     title: "Nos Réalisations",
-    subtitle: "Découvrez quelques-uns de nos projets récents",
+    subtitle: "Découvrez nos derniers chantiers en Nouvelle-Aquitaine",
     initialDisplayCount: 4,
     images: []
   },
   contact: {
     title: "Contactez-nous",
-    subtitle: "Parlons de votre projet"
+    subtitle: "Parlons de votre projet ensemble"
   },
   team: {
     members: []
@@ -157,19 +162,5 @@ const defaultConfig: SiteConfig = {
   }
 };
 
-// Merge config with defaults
-function mergeWithDefaults(config: any, defaults: any): any {
-  const result = { ...defaults };
-  
-  for (const key in config) {
-    if (config[key] && typeof config[key] === 'object' && !Array.isArray(config[key])) {
-      result[key] = mergeWithDefaults(config[key], defaults[key] || {});
-    } else if (config[key] !== undefined && config[key] !== null) {
-      result[key] = config[key];
-    }
-  }
-  
-  return result;
-}
-
-export const config: SiteConfig = mergeWithDefaults(siteConfig, defaultConfig);
+// Export the config directly
+export const config = siteConfig;

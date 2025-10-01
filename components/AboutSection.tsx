@@ -16,6 +16,7 @@ interface AboutSectionProps {
   buttonText?: string;
   buttonHref?: string;
   reversed?: boolean;
+  id?: string;
 }
 
 export default function AboutSection({
@@ -29,7 +30,8 @@ export default function AboutSection({
   gradientTo = "#764ba2",
   buttonText,
   buttonHref,
-  reversed = false
+  reversed = false,
+  id
 }: AboutSectionProps) {
   const getBackgroundStyle = () => {
     if (image || video) {
@@ -41,7 +43,7 @@ export default function AboutSection({
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section id={id} className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reversed ? 'lg:grid-flow-col-dense' : ''}`}>
           {/* Image side */}

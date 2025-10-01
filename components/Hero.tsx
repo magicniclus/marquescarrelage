@@ -5,6 +5,7 @@ import { Check, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 import { HeroConfig } from '@/lib/config';
 import { submitFormToFirebase, validateFormData, FormData } from '@/lib/firebase-service';
@@ -24,20 +25,20 @@ export default function Hero({
   config,
   backgroundImage,
   backgroundVideo,
-  title = "Trouvez le professionnel idéal pour vos travaux",
-  description = "Mettez en relation avec des artisans qualifiés et obtenez des devis gratuits pour tous vos projets de construction et rénovation.",
+  title = "Belrhali - Artisan du bâtiment",
+  description = "Spécialiste en maçonnerie, terrassement et menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Nouvelle-Aquitaine.",
   bulletPoints = [
-    "Artisans certifiés et vérifiés",
-    "Devis gratuits sous 24h",
-    "Accompagnement personnalisé"
+    "Entreprise certifiée RGE",
+    "Équipe de 6 à 10 professionnels",
+    "Intervention dans 6 départements"
   ],
   googleReviewsWidget
 }: HeroProps) {
   // Use config values if provided, otherwise fall back to props or defaults
   const heroTitle = config?.title || title;
   const heroSubtitle = config?.subtitle || description;
-  const heroButtonText = config?.buttonText || "Demander un devis";
-  const heroButtonHref = config?.buttonHref || "#contact";
+  // const heroButtonText = config?.buttonText || "Demander un devis";
+  // const heroButtonHref = config?.buttonHref || "#contact";
   const heroBackgroundImage = config?.backgroundImage || backgroundImage;
   const heroBackgroundVideo = config?.backgroundVideo || backgroundVideo;
   const router = useRouter();
@@ -148,6 +149,22 @@ export default function Hero({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* RGE Logo */}
+            <motion.div
+              className="flex justify-start"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <Image
+                src="/rge.png"
+                alt="Certification RGE"
+                width={60}
+                height={30}
+                className="object-contain"
+              />
+            </motion.div>
+
             {/* Title */}
             <motion.h1 
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
