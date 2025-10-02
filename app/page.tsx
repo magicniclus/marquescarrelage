@@ -11,6 +11,7 @@ import LogoCarousel from '@/components/LogoCarousel';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 import { useExitIntent } from '@/hooks/useExitIntent';
 import { config } from '@/lib/config';
+import { organizationSchema, servicesSchema } from '@/lib/seo-config';
 
 export default function Home() {
   const { showExitIntent, closeExitIntent } = useExitIntent({
@@ -56,6 +57,20 @@ export default function Home() {
 
   return (
     <div>
+      {/* Données structurées JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesSchema),
+        }}
+      />
+      
       <Hero config={config.hero} />
       <LogoCarousel config={config.partners} speed={30} />
       <AboutSection
