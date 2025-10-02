@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { generateMetadata } from "@/lib/seo-config";
 import Script from "next/script";
 
 export const metadata: Metadata = {

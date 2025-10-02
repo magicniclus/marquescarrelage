@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building, Mail, Phone, Calendar } from 'lucide-react';
+import { Building, Mail } from 'lucide-react';
 import { config } from '@/lib/config';
 
 export default function MentionsLegalesPage() {
@@ -194,7 +194,7 @@ export default function MentionsLegalesPage() {
             {/* Date de mise à jour */}
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
               <div className="flex items-center justify-center space-x-2 mb-4">
-                <Calendar className="h-5 w-5 text-gray-600" />
+                <Building className="h-5 w-5 text-gray-600" />
                 <span className="text-sm font-semibold text-gray-700">Dernière mise à jour</span>
               </div>
               <p className="text-gray-600">25 août 2025</p>

@@ -17,7 +17,7 @@ export const analyticsConfig = {
 };
 
 // Fonction pour tracker les événements
-export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+export const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, parameters);
   }
@@ -55,7 +55,7 @@ export const trackQuoteRequest = () => {
 // Déclaration des types pour TypeScript
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
   }
 }
