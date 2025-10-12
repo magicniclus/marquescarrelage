@@ -1,16 +1,16 @@
 {
   "company": {
-    "name": "Belrhali",
-    "legalName": "Belrhali",
-    "address": "Secteurs d'activité : Corrèze, Dordogne, Haute-Vienne, Lot, Gironde, Lot-et-Garonne",
-    "phone": "06 82 65 45 76",
-    "email": "contact@belrhali.fr",
+    "name": "Adbetton",
+    "legalName": "Adbetton",
+    "address": "Secteurs d'activité : Ille-et-Vilaine (35), Côtes-d'Armor (22), Manche (50)",
+    "phone": "07 49 22 93 92",
+    "email": "adbetton32@gmail.com",
     "siret": "",
-    "ceo": "Hicham Belrhali"
+    "ceo": "Adbetton"
   },
   "hero": {
-    "title": "Belrhali - Artisan du bâtiment",
-    "subtitle": "Spécialiste en maçonnerie, terrassement et menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Nouvelle-Aquitaine.",
+    "title": "Adbetton - Maçonnerie Générale",
+    "subtitle": "Spécialiste en maçonnerie générale (gros second œuvre) et pose de menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Bretagne et Normandie.",
     "buttonText": "Demander un devis",
     "buttonHref": "#contact",
     "backgroundImage": "/maison-hero.png",
@@ -20,9 +20,9 @@
     "sections": [
       {
         "smallTitle": "Notre expertise",
-        "title": "Maçonnerie et terrassement",
-        "subtitle": "Des fondations solides pour vos projets",
-        "content": "Spécialisés dans la maçonnerie traditionnelle et moderne, on réalise tous vos travaux de gros œuvre : fondations, murs porteurs, cloisons, dalles. Notre expertise en terrassement garantit une préparation parfaite de vos terrains pour tout type de construction ou d'aménagement extérieur.",
+        "title": "Maçonnerie générale",
+        "subtitle": "Gros second œuvre de qualité",
+        "content": "Spécialisés dans la maçonnerie générale et le gros second œuvre, nous réalisons tous vos travaux de construction : élévation de murs, cloisons, dalles, chapes. Notre savoir-faire garantit des réalisations durables et conformes aux normes en vigueur pour tous vos projets de construction neuve ou de rénovation.",
         "image": "/maison-1.png",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
@@ -32,9 +32,9 @@
       },
       {
         "smallTitle": "Nos spécialités",
-        "title": "Menuiserie et rénovation",
-        "subtitle": "Confort et qualité sur mesure",
-        "content": "Notre compétence en menuiserie nous permet de vous offrir des solutions complètes pour améliorer votre habitat : fenêtres, portes, placards, escaliers. On réalise également vos travaux de rénovation intérieure et extérieure avec un souci du détail et de la finition.",
+        "title": "Pose de menuiserie",
+        "subtitle": "Installation professionnelle",
+        "content": "Notre expertise en pose de menuiserie nous permet de vous offrir des installations de qualité : fenêtres, portes, volets, cloisons. Nous travaillons avec des matériaux de qualité et respectons les règles de l'art pour garantir l'étanchéité, l'isolation et la durabilité de vos menuiseries.",
         "image": "/maison-2.png",
         "gradientFrom": "#667eea",
         "gradientTo": "#764ba2",
@@ -46,38 +46,38 @@
   },
   "gallery": {
     "title": "Nos Réalisations",
-    "subtitle": "Découvrez nos derniers chantiers en Nouvelle-Aquitaine",
+    "subtitle": "Découvrez nos derniers chantiers en Bretagne et Normandie",
     "initialDisplayCount": 4,
     "images": [
       {
         "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-        "alt": "Rénovation cuisine moderne",
-        "title": "Cuisine moderne - Paris 16ème"
+        "alt": "Maçonnerie générale",
+        "title": "Élévation murs - Rennes (35)"
       },
       {
         "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Salle de bain contemporaine",
-        "title": "Salle de bain - Neuilly"
+        "alt": "Pose de menuiserie",
+        "title": "Installation fenêtres - Saint-Brieuc (22)"
       },
       {
         "src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=800&fit=crop",
-        "alt": "Extension maison",
-        "title": "Extension - Boulogne"
+        "alt": "Gros second œuvre",
+        "title": "Construction neuve - Cherbourg (50)"
       },
       {
         "src": "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=800&fit=crop",
-        "alt": "Rénovation salon",
-        "title": "Salon design - Levallois"
+        "alt": "Cloisons maçonnerie",
+        "title": "Cloisons intérieures - Fougères (35)"
       },
       {
         "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Terrasse aménagée",
-        "title": "Terrasse - Vincennes"
+        "alt": "Pose de portes",
+        "title": "Installation portes - Lannion (22)"
       },
       {
         "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-        "alt": "Combles aménagés",
-        "title": "Combles - Saint-Cloud"
+        "alt": "Rénovation maçonnerie",
+        "title": "Rénovation - Granville (50)"
       }
     ]
   },
@@ -88,28 +88,16 @@
   "team": {
     "members": [
       {
-        "name": "Nicolas Castéra",
-        "position": "Directeur Général",
-        "description": "Expert en gestion de projets avec plus de 15 ans d'expérience dans le bâtiment.",
+        "name": "Adbetton",
+        "position": "Artisan Maçon",
+        "description": "Auto-entrepreneur spécialisé en maçonnerie générale et pose de menuiserie depuis 2022. Expert du gros second œuvre avec garantie décennale.",
         "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
       },
       {
-        "name": "Marie Dubois",
-        "position": "Responsable Commerciale",
-        "description": "Spécialisée dans l'accompagnement client et la coordination des équipes d'artisans.",
-        "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-      },
-      {
-        "name": "Pierre Martin",
-        "position": "Chef de Projet",
-        "description": "Architecte de formation, il supervise la qualité et le suivi de tous nos chantiers.",
+        "name": "Équipe Adbetton",
+        "position": "Équipe de Maçons",
+        "description": "Une équipe de 2 à 5 collaborateurs expérimentés, spécialisés dans les travaux de maçonnerie et la pose de menuiserie.",
         "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
-      },
-      {
-        "name": "Sophie Laurent",
-        "position": "Responsable Qualité",
-        "description": "Garante de l'excellence de nos prestations et de la satisfaction de nos clients.",
-        "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
       }
     ]
   },

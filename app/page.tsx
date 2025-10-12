@@ -21,38 +21,30 @@ export default function Home() {
   });
   const servicesData = [
     {
-      title: "Maçonnerie",
-      subtitle: "Gros œuvre & Rénovation",
-      content: "Fondations, murs porteurs, cloisons, dalles béton. On réalise tous vos travaux de maçonnerie avec un savoir-faire traditionnel et des techniques modernes.",
+      title: "Maçonnerie Générale",
+      subtitle: "Gros Second Œuvre",
+      content: "Élévation de murs, cloisons, dalles, chapes. Nous réalisons tous vos travaux de maçonnerie générale avec expertise et garantie décennale.",
       image: "/macon.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b"
     },
     {
-      title: "Terrassement",
-      subtitle: "Préparation de terrain",
-      content: "Excavation, nivellement, drainage. On prépare vos terrains pour vos constructions et aménagements extérieurs avec précision.",
-      image: "/terrassement.png",
+      title: "Pose de Menuiserie",
+      subtitle: "Installation Professionnelle",
+      content: "Fenêtres, portes, volets, cloisons. Nous installons vos menuiseries avec précision en respectant les règles de l'art.",
+      image: "/menuiserie.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2"
-    },
-    {
-      title: "Menuiserie",
-      subtitle: "Sur mesure & Rénovation",
-      content: "Fenêtres, portes, placards, escaliers. On conçoit et installe vos menuiseries intérieures et extérieures selon vos besoins.",
-      image: "/menuiserie.png",
-      gradientFrom: "#10b981",
-      gradientTo: "#059669"
     }
   ];
 
 
 
   const contactInfo = {
-    address: "Zones d'intervention :\nCorrèze (19), Dordogne (24), haute-Vienne (87)\nLot (46), Gironde (33), Lot-et-Garonne (47)",
-    phone: "06 82 65 45 76",
-    email: "contact@belrhali.fr",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Nouvelle-Aquitaine,France&t=&z=8&ie=UTF8&iwloc=&output=embed"
+    address: "Zones d'intervention :\nIlle-et-Vilaine (35), Côtes-d'Armor (22)\nManche (50)",
+    phone: "07 49 22 93 92",
+    email: "adbetton32@gmail.com",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Bretagne,France&t=&z=8&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -103,7 +95,7 @@ export default function Home() {
       <TeamSection config={config.team} />
       <ContactSection 
         title="Contactez-nous"
-        subtitle="Parlons de votre projet de construction ou rénovation en Nouvelle-Aquitaine"
+        subtitle="Parlons de votre projet de maçonnerie ou pose de menuiserie en Bretagne et Normandie"
         contactInfo={contactInfo} 
       />
 

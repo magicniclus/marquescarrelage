@@ -5,32 +5,32 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Belrhali - Artisan Maçonnerie, Terrassement & Menuiserie en Nouvelle-Aquitaine",
-  description: "Belrhali, artisan du bâtiment spécialisé en maçonnerie, terrassement et menuiserie. Devis gratuit en Corrèze, Dordogne, Haute-Vienne, Lot, Gironde et Lot-et-Garonne. Expertise locale depuis 15 ans.",
-  keywords: "maçonnerie Nouvelle-Aquitaine, terrassement Corrèze, menuiserie Dordogne, artisan bâtiment, construction rénovation, maçon Haute-Vienne, terrassement Lot, menuisier Gironde, gros œuvre, fondations, devis gratuit, Belrhali, travaux maison, rénovation intérieure, aménagement extérieur",
-  authors: [{ name: "Belrhali" }],
-  creator: "Belrhali",
-  publisher: "Belrhali",
+  title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
+  description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche. Garantie décennale.",
+  keywords: "maçonnerie générale Bretagne, gros second œuvre Ille-et-Vilaine, pose menuiserie Côtes-d'Armor, artisan maçon Manche, construction Bretagne, maçon Rennes, menuiserie Saint-Brieuc, maçonnerie Cherbourg, gros œuvre, cloisons, devis gratuit, Adbetton, travaux maison, garantie décennale, auto-entrepreneur bâtiment",
+  authors: [{ name: "Adbetton" }],
+  creator: "Adbetton",
+  publisher: "Adbetton",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://belrhali.fr"),
+  metadataBase: new URL("https://adbetton.fr"),
   alternates: {
-    canonical: "https://belrhali.fr",
+    canonical: "https://adbetton.fr",
   },
   openGraph: {
-    title: "Belrhali - Artisan Maçonnerie, Terrassement & Menuiserie en Nouvelle-Aquitaine",
-    description: "Belrhali, artisan du bâtiment spécialisé en maçonnerie, terrassement et menuiserie. Devis gratuit en Corrèze, Dordogne, Haute-Vienne, Lot, Gironde et Lot-et-Garonne.",
-    url: "https://belrhali.fr",
-    siteName: "Belrhali - Artisan du Bâtiment",
+    title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
+    description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche.",
+    url: "https://adbetton.fr",
+    siteName: "Adbetton - Maçonnerie Générale",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Belrhali - Artisan du Bâtiment en Nouvelle-Aquitaine",
+        alt: "Adbetton - Maçonnerie Générale en Bretagne et Normandie",
       },
     ],
     locale: "fr_FR",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Belrhali - Artisan Maçonnerie, Terrassement & Menuiserie",
-    description: "Artisan du bâtiment en Nouvelle-Aquitaine. Maçonnerie, terrassement, menuiserie. Devis gratuit.",
+    title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie",
+    description: "Auto-entrepreneur en Bretagne et Normandie. Maçonnerie générale, pose de menuiserie. Devis gratuit.",
     images: ["/og-image.jpg"],
   },
   robots: {

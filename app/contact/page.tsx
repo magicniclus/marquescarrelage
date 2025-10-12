@@ -45,11 +45,11 @@ export default function ContactPage() {
   };
 
   const contactInfo = {
-    address: "123 Avenue des Champs-Élysées\n75008 Paris, France",
-    phone: "01 23 45 67 89",
-    email: "contact@trouvermonchantier.fr",
-    hours: "Lundi - Vendredi: 9h00 - 18h00\nSamedi: 9h00 - 12h00",
-    mapEmbedUrl: "https://maps.google.com/maps?q=123+Avenue+des+Champs-Élysées,75008+Paris,France&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    address: "Zones d'intervention :\nIlle-et-Vilaine (35)\nCôtes-d'Armor (22)\nManche (50)",
+    phone: "07 49 22 93 92",
+    email: "adbetton32@gmail.com",
+    hours: "Lundi - Vendredi: 8h00 - 18h00\nSamedi: 8h00 - 12h00",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Bretagne,France&t=&z=8&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -70,7 +70,7 @@ export default function ContactPage() {
               Contactez-nous
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Une question ? Un projet ? Notre équipe est là pour vous accompagner dans tous vos travaux.
+              Un projet de maçonnerie ou de pose de menuiserie ? Notre équipe est là pour vous accompagner en Bretagne et Normandie.
             </p>
           </motion.div>
         </div>

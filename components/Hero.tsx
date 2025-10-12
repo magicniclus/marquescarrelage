@@ -25,12 +25,12 @@ export default function Hero({
   config,
   backgroundImage,
   backgroundVideo,
-  title = "Belrhali - Artisan du bâtiment",
-  description = "Spécialiste en maçonnerie, terrassement et menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Nouvelle-Aquitaine.",
+  title = "Adbetton - Maçonnerie générale et pose de menuiserie",
+  description = "Auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Bretagne et Normandie.",
   bulletPoints = [
-    "Entreprise certifiée RGE",
-    "Équipe de 6 à 10 professionnels",
-    "Intervention dans 6 départements"
+    "Auto-entrepreneur avec garantie décennale",
+    "Équipe de 2 professionnels expérimentés",
+    "Intervention en Bretagne et Normandie"
   ],
   googleReviewsWidget
 }: HeroProps) {
@@ -149,21 +149,6 @@ export default function Hero({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* RGE Logo */}
-            <motion.div
-              className="flex justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-            >
-              <Image
-                src="/rge.png"
-                alt="Certification RGE"
-                width={60}
-                height={30}
-                className="object-contain"
-              />
-            </motion.div>
 
             {/* Title */}
             <motion.h1 

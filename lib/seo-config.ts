@@ -14,32 +14,32 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "Belrhali - Artisan Maçonnerie, Terrassement & Menuiserie en Nouvelle-Aquitaine",
-  description: "Belrhali, artisan du bâtiment spécialisé en maçonnerie, terrassement et menuiserie. Devis gratuit en Corrèze, Dordogne, Haute-Vienne, Lot, Gironde et Lot-et-Garonne.",
+  title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
+  description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche.",
   keywords: [
-    "maçonnerie Nouvelle-Aquitaine",
-    "terrassement Corrèze",
-    "menuiserie Dordogne",
-    "artisan bâtiment",
-    "construction rénovation",
-    "maçon Haute-Vienne",
-    "terrassement Lot",
-    "menuisier Gironde",
+    "maçonnerie générale Bretagne",
+    "gros second œuvre Ille-et-Vilaine",
+    "pose menuiserie Côtes-d'Armor",
+    "artisan maçon Manche",
+    "construction Bretagne",
+    "maçon Rennes",
+    "menuiserie Saint-Brieuc",
+    "maçonnerie Cherbourg",
     "gros œuvre",
-    "fondations",
+    "cloisons",
     "devis gratuit",
-    "Belrhali",
+    "Adbetton",
     "travaux maison",
-    "rénovation intérieure",
-    "aménagement extérieur"
+    "garantie décennale",
+    "auto-entrepreneur bâtiment"
   ],
-  author: "Belrhali",
-  siteUrl: "https://belrhali.fr",
-  siteName: "Belrhali - Artisan du Bâtiment",
+  author: "Adbetton",
+  siteUrl: "https://adbetton.fr",
+  siteName: "Adbetton - Maçonnerie Générale",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
-  twitterHandle: "@belrhali"
+  twitterHandle: "@adbetton"
 };
 
 export function generateMetadata(
@@ -116,58 +116,46 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
-  "name": "Belrhali",
-  "legalName": "Belrhali",
+  "name": "Adbetton",
+  "legalName": "Adbetton",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
   "description": seoConfig.description,
   "founder": {
     "@type": "Person",
-    "name": "Hicham Belrhali"
+    "name": "Adbetton"
   },
   "address": {
     "@type": "PostalAddress",
-    "addressRegion": "Nouvelle-Aquitaine",
+    "addressRegion": "Bretagne",
     "addressCountry": "FR"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+33682654576",
+    "telephone": "+33749229392",
     "contactType": "customer service",
-    "email": "contact@belrhali.fr",
+    "email": "adbetton32@gmail.com",
     "availableLanguage": "French"
   },
   "areaServed": [
     {
       "@type": "AdministrativeArea",
-      "name": "Corrèze"
+      "name": "Ille-et-Vilaine"
     },
     {
       "@type": "AdministrativeArea", 
-      "name": "Dordogne"
+      "name": "Côtes-d'Armor"
     },
     {
       "@type": "AdministrativeArea",
-      "name": "Haute-Vienne"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Lot"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Gironde"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Lot-et-Garonne"
+      "name": "Manche"
     }
   ],
   "serviceType": [
-    "Maçonnerie",
-    "Terrassement", 
-    "Menuiserie",
+    "Maçonnerie générale",
+    "Gros second œuvre", 
+    "Pose de menuiserie",
     "Construction",
     "Rénovation"
   ],
@@ -195,24 +183,16 @@ export const servicesSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Maçonnerie",
-          "description": "Fondations, murs porteurs, cloisons, dalles béton"
-        }
-      },
-      {
-        "@type": "Offer", 
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Terrassement",
-          "description": "Excavation, nivellement, drainage, préparation de terrain"
+          "name": "Maçonnerie générale",
+          "description": "Élévation de murs, cloisons, dalles, chapes, gros second œuvre"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service", 
-          "name": "Menuiserie",
-          "description": "Fenêtres, portes, placards, escaliers sur mesure"
+          "name": "Pose de menuiserie",
+          "description": "Installation de fenêtres, portes, volets, cloisons"
         }
       }
     ]

@@ -16,7 +16,7 @@ import {
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
-  const phoneNumber = "06 82 65 45 76";
+  const phoneNumber = "07 49 22 93 92";
 
   const navigationLinks = [
     { name: 'Mon expertise', href: '#expertise' },
@@ -81,7 +81,7 @@ export default function Navigation() {
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">Belrhali</span>
+                <span className="text-xl font-bold text-gray-900">Adbetton</span>
                 <span className="text-xs text-gray-600 font-medium">maçonnerie - menuiserie</span>
               </div>
             </Link>
@@ -167,16 +167,6 @@ export default function Navigation() {
 
           {/* Menu mobile */}
           <div className="md:hidden">
-            <Button
-              variant="ghost"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-              asChild
-            >
-              <a href="https://app.trouver-mon-chantier.fr" target="_blank" rel="noopener noreferrer">
-                <User className="h-4 w-4 mr-2" />
-                Mon espace
-              </a>
-            </Button>
             <Button 
               variant="ghost" 
               size="icon"
@@ -223,7 +213,7 @@ export default function Navigation() {
                 </motion.div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-foreground">
-                    Belrhali
+                    Adbetton
                   </span>
                   <span className="text-xs text-gray-400 font-medium">
                     maçonnerie - menuiserie
