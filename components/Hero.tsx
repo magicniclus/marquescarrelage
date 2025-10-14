@@ -25,12 +25,12 @@ export default function Hero({
   config,
   backgroundImage,
   backgroundVideo,
-  title = "Adbetton - Maçonnerie générale et pose de menuiserie",
-  description = "Auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Bretagne et Normandie.",
+  title = "Bouzalmata - Maçonnerie & Gros Œuvre",
+  description = "Entreprise SARL spécialisée en maçonnerie et gros œuvre depuis 2016. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Île-de-France.",
   bulletPoints = [
-    "Auto-entrepreneur avec garantie décennale",
-    "Équipe de 2 professionnels expérimentés",
-    "Intervention en Bretagne et Normandie"
+    "Entreprise SARL créée en 2016",
+    "Équipe de 6 à 10 professionnels expérimentés",
+    "Intervention en Île-de-France"
   ],
   googleReviewsWidget
 }: HeroProps) {

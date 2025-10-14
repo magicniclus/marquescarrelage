@@ -21,17 +21,17 @@ export default function Home() {
   });
   const servicesData = [
     {
-      title: "Maçonnerie Générale",
-      subtitle: "Gros Second Œuvre",
-      content: "Élévation de murs, cloisons, dalles, chapes. Nous réalisons tous vos travaux de maçonnerie générale avec expertise et garantie décennale.",
+      title: "Maçonnerie & Gros Œuvre",
+      subtitle: "Fondations & Structures",
+      content: "Fondations, élévation de murs, dalles, chapes, structures. Bouzalmata SARL réalise tous vos travaux de gros œuvre avec une équipe expérimentée depuis 2016.",
       image: "/macon.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b"
     },
     {
-      title: "Pose de Menuiserie",
-      subtitle: "Installation Professionnelle",
-      content: "Fenêtres, portes, volets, cloisons. Nous installons vos menuiseries avec précision en respectant les règles de l'art.",
+      title: "Rénovation & Extension",
+      subtitle: "Transformation d'espaces",
+      content: "Réfection de façades, reprise de maçonnerie, extensions, aménagements. Notre équipe de 6 à 10 collaborateurs vous accompagne dans tous vos projets.",
       image: "/menuiserie.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2"
@@ -41,10 +41,10 @@ export default function Home() {
 
 
   const contactInfo = {
-    address: "Zones d'intervention :\nIlle-et-Vilaine (35), Côtes-d'Armor (22)\nManche (50)",
-    phone: "07 49 22 93 92",
-    email: "adbetton32@gmail.com",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Bretagne,France&t=&z=8&ie=UTF8&iwloc=&output=embed"
+    address: "Zone d'intervention :\nÎle-de-France",
+    phone: "06 99 37 42 63",
+    email: "contact@bouzalmata.fr",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Ile-de-France,France&t=&z=9&ie=UTF8&iwloc=&output=embed"
   };
 
   return (

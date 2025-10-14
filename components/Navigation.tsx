@@ -16,7 +16,7 @@ import {
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
-  const phoneNumber = "07 49 22 93 92";
+  const phoneNumber = "06 99 37 42 63";
 
   const navigationLinks = [
     { name: 'Mon expertise', href: '#expertise' },
@@ -81,8 +81,8 @@ export default function Navigation() {
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">Adbetton</span>
-                <span className="text-xs text-gray-600 font-medium">maçonnerie - menuiserie</span>
+                <span className="text-xl font-bold text-gray-900">Bouzalmata</span>
+                <span className="text-xs text-gray-600 font-medium">maçonnerie - gros œuvre</span>
               </div>
             </Link>
           </motion.div>
@@ -213,10 +213,10 @@ export default function Navigation() {
                 </motion.div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-foreground">
-                    Adbetton
+                    Bouzalmata
                   </span>
                   <span className="text-xs text-gray-400 font-medium">
-                    maçonnerie - menuiserie
+                    maçonnerie - gros œuvre
                   </span>
                 </div>
               </div>

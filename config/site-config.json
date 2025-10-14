@@ -1,16 +1,16 @@
 {
   "company": {
-    "name": "Adbetton",
-    "legalName": "Adbetton",
-    "address": "Secteurs d'activité : Ille-et-Vilaine (35), Côtes-d'Armor (22), Manche (50)",
-    "phone": "07 49 22 93 92",
-    "email": "adbetton32@gmail.com",
+    "name": "Bouzalmata",
+    "legalName": "Bouzalmata SARL",
+    "address": "Secteur d'activité : Île-de-France",
+    "phone": "06 99 37 42 63",
+    "email": "contact@bouzalmata.fr",
     "siret": "",
-    "ceo": "Adbetton"
+    "ceo": "Bouzalmata"
   },
   "hero": {
-    "title": "Adbetton - Maçonnerie Générale",
-    "subtitle": "Spécialiste en maçonnerie générale (gros second œuvre) et pose de menuiserie. Votre partenaire de confiance dans les secteurs d'Ille-et-Vilaine (35), Côtes-d'Armor (22) et Manche (50) pour tous vos projets de construction et rénovation.",
+    "title": "Bouzalmata - Maçonnerie & Gros Œuvre",
+    "subtitle": "Entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Votre partenaire de confiance en Île-de-France pour tous vos projets de construction et rénovation avec une équipe expérimentée.",
     "buttonText": "Demander un devis",
     "buttonHref": "#contact",
     "backgroundImage": "/maison-hero.png",
@@ -20,9 +20,9 @@
     "sections": [
       {
         "smallTitle": "Notre expertise",
-        "title": "Maçonnerie générale",
-        "subtitle": "Gros second œuvre de qualité",
-        "content": "Spécialisés dans la maçonnerie générale et le gros second œuvre, nous réalisons tous vos travaux de construction : élévation de murs, cloisons, dalles, chapes. Notre savoir-faire garantit des réalisations durables et conformes aux normes en vigueur pour tous vos projets de construction neuve ou de rénovation.",
+        "title": "Maçonnerie & Gros Œuvre",
+        "subtitle": "Spécialistes depuis 2016",
+        "content": "Bouzalmata SARL est spécialisée dans la maçonnerie et le gros œuvre depuis 2016. Nous réalisons tous vos travaux de construction : fondations, élévation de murs, dalles, chapes, et structures. Notre équipe de professionnels garantit des réalisations durables et conformes aux normes en vigueur en Île-de-France.",
         "image": "/maison-1.png",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
@@ -32,9 +32,9 @@
       },
       {
         "smallTitle": "Nos spécialités",
-        "title": "Pose de menuiserie",
-        "subtitle": "Installation professionnelle",
-        "content": "Notre expertise en pose de menuiserie nous permet de vous offrir des installations de qualité : fenêtres, portes, volets, cloisons. Nous travaillons avec des matériaux de qualité et respectons les règles de l'art pour garantir l'étanchéité, l'isolation et la durabilité de vos menuiseries.",
+        "title": "Travaux de rénovation",
+        "subtitle": "Expertise complète",
+        "content": "En complément de nos activités de gros œuvre, nous intervenons sur tous vos projets de rénovation : réfection de façades, reprise de maçonnerie, aménagements intérieurs. Notre équipe de 6 à 10 collaborateurs expérimentés vous accompagne dans tous vos projets en Île-de-France.",
         "image": "/maison-2.png",
         "gradientFrom": "#667eea",
         "gradientTo": "#764ba2",
@@ -46,38 +46,38 @@
   },
   "gallery": {
     "title": "Nos Réalisations",
-    "subtitle": "Découvrez nos derniers chantiers en Bretagne et Normandie",
+    "subtitle": "Découvrez nos derniers chantiers en Île-de-France",
     "initialDisplayCount": 4,
     "images": [
       {
         "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
         "alt": "Maçonnerie générale",
-        "title": "Élévation murs - Rennes (35)"
+        "title": "Maçonnerie générale - Paris (75)"
       },
       {
         "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
         "alt": "Pose de menuiserie",
-        "title": "Installation fenêtres - Saint-Brieuc (22)"
+        "title": "Gros œuvre - Créteil (94)"
       },
       {
         "src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=800&fit=crop",
         "alt": "Gros second œuvre",
-        "title": "Construction neuve - Cherbourg (50)"
+        "title": "Construction neuve - Meaux (77)"
       },
       {
         "src": "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=800&fit=crop",
         "alt": "Cloisons maçonnerie",
-        "title": "Cloisons intérieures - Fougères (35)"
+        "title": "Rénovation - Versailles (78)"
       },
       {
         "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
         "alt": "Pose de portes",
-        "title": "Installation portes - Lannion (22)"
+        "title": "Façade - Pontoise (95)"
       },
       {
         "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
         "alt": "Rénovation maçonnerie",
-        "title": "Rénovation - Granville (50)"
+        "title": "Extension - Bobigny (93)"
       }
     ]
   },
@@ -88,15 +88,15 @@
   "team": {
     "members": [
       {
-        "name": "Adbetton",
-        "position": "Artisan Maçon",
-        "description": "Auto-entrepreneur spécialisé en maçonnerie générale et pose de menuiserie depuis 2022. Expert du gros second œuvre avec garantie décennale.",
+        "name": "Bouzalmata",
+        "position": "Dirigeant & Maître Maçon",
+        "description": "Fondateur de Bouzalmata SARL en 2016, spécialisé en maçonnerie et gros œuvre. Expert reconnu dans le secteur avec plus de 8 ans d'expérience en Île-de-France.",
         "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
       },
       {
-        "name": "Équipe Adbetton",
-        "position": "Équipe de Maçons",
-        "description": "Une équipe de 2 à 5 collaborateurs expérimentés, spécialisés dans les travaux de maçonnerie et la pose de menuiserie.",
+        "name": "Équipe Bouzalmata",
+        "position": "Équipe de Maçons Professionnels",
+        "description": "Une équipe de 6 à 10 collaborateurs expérimentés, spécialisés dans la maçonnerie et le gros œuvre. Intervention sur tous types de chantiers en Île-de-France.",
         "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
       }
     ]

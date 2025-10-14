@@ -5,32 +5,32 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
-  description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche. Garantie décennale.",
-  keywords: "maçonnerie générale Bretagne, gros second œuvre Ille-et-Vilaine, pose menuiserie Côtes-d'Armor, artisan maçon Manche, construction Bretagne, maçon Rennes, menuiserie Saint-Brieuc, maçonnerie Cherbourg, gros œuvre, cloisons, devis gratuit, Adbetton, travaux maison, garantie décennale, auto-entrepreneur bâtiment",
-  authors: [{ name: "Adbetton" }],
-  creator: "Adbetton",
-  publisher: "Adbetton",
+  title: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
+  description: "Bouzalmata SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit pour vos projets de construction et rénovation.",
+  keywords: "maçonnerie Île-de-France, gros œuvre Paris, maçon professionnel 75, construction Seine-et-Marne, rénovation Essonne, maçonnerie Val-de-Marne, gros œuvre Hauts-de-Seine, entreprise maçonnerie 77, maçon 78, construction 91, Bouzalmata, travaux maçonnerie, devis gratuit, SARL maçonnerie",
+  authors: [{ name: "Bouzalmata" }],
+  creator: "Bouzalmata",
+  publisher: "Bouzalmata SARL",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://adbetton.fr"),
+  metadataBase: new URL("https://bouzalmata.fr"),
   alternates: {
-    canonical: "https://adbetton.fr",
+    canonical: "https://bouzalmata.fr",
   },
   openGraph: {
-    title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
-    description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche.",
-    url: "https://adbetton.fr",
-    siteName: "Adbetton - Maçonnerie Générale",
+    title: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
+    description: "Bouzalmata SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit.",
+    url: "https://bouzalmata.fr",
+    siteName: "Bouzalmata - Maçonnerie & Gros Œuvre",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Adbetton - Maçonnerie Générale en Bretagne et Normandie",
+        alt: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France",
       },
     ],
     locale: "fr_FR",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie",
-    description: "Auto-entrepreneur en Bretagne et Normandie. Maçonnerie générale, pose de menuiserie. Devis gratuit.",
+    title: "Bouzalmata - Maçonnerie & Gros Œuvre",
+    description: "Entreprise SARL spécialisée en maçonnerie et gros œuvre en Île-de-France depuis 2016. Devis gratuit.",
     images: ["/og-image.jpg"],
   },
   robots: {

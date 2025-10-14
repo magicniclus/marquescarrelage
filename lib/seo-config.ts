@@ -14,32 +14,33 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
-  description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche.",
+  title: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
+  description: "Bouzalmata SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit pour vos projets de construction et rénovation.",
   keywords: [
-    "maçonnerie générale Bretagne",
-    "gros second œuvre Ille-et-Vilaine",
-    "pose menuiserie Côtes-d'Armor",
-    "artisan maçon Manche",
-    "construction Bretagne",
-    "maçon Rennes",
-    "menuiserie Saint-Brieuc",
-    "maçonnerie Cherbourg",
-    "gros œuvre",
-    "cloisons",
+    "maçonnerie Île-de-France",
+    "gros œuvre Paris",
+    "maçon professionnel 75",
+    "construction Seine-et-Marne",
+    "rénovation Essonne",
+    "maçonnerie Val-de-Marne",
+    "gros œuvre Hauts-de-Seine",
+    "entreprise maçonnerie 77",
+    "maçon 78",
+    "construction 91",
+    "Bouzalmata",
+    "travaux maçonnerie",
     "devis gratuit",
-    "Adbetton",
-    "travaux maison",
-    "garantie décennale",
-    "auto-entrepreneur bâtiment"
+    "SARL maçonnerie",
+    "fondations",
+    "structures"
   ],
-  author: "Adbetton",
-  siteUrl: "https://adbetton.fr",
-  siteName: "Adbetton - Maçonnerie Générale",
+  author: "Bouzalmata",
+  siteUrl: "https://bouzalmata.fr",
+  siteName: "Bouzalmata - Maçonnerie & Gros Œuvre",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
-  twitterHandle: "@adbetton"
+  twitterHandle: "@bouzalmata"
 };
 
 export function generateMetadata(
@@ -116,51 +117,46 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
-  "name": "Adbetton",
-  "legalName": "Adbetton",
+  "name": "Bouzalmata",
+  "legalName": "Bouzalmata SARL",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
   "description": seoConfig.description,
   "founder": {
     "@type": "Person",
-    "name": "Adbetton"
+    "name": "Bouzalmata"
   },
+  "foundingDate": "2016",
+  "numberOfEmployees": "6-10",
   "address": {
     "@type": "PostalAddress",
-    "addressRegion": "Bretagne",
+    "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+33749229392",
+    "telephone": "+33699374263",
     "contactType": "customer service",
-    "email": "adbetton32@gmail.com",
+    "email": "contact@bouzalmata.fr",
     "availableLanguage": "French"
   },
   "areaServed": [
     {
       "@type": "AdministrativeArea",
-      "name": "Ille-et-Vilaine"
-    },
-    {
-      "@type": "AdministrativeArea", 
-      "name": "Côtes-d'Armor"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Manche"
+      "name": "Île-de-France"
     }
   ],
   "serviceType": [
-    "Maçonnerie générale",
-    "Gros second œuvre", 
-    "Pose de menuiserie",
+    "Maçonnerie",
+    "Gros œuvre", 
+    "Fondations",
     "Construction",
-    "Rénovation"
+    "Rénovation",
+    "Extension"
   ],
   "priceRange": "€€",
-  "openingHours": "Mo-Fr 08:00-18:00",
+  "openingHours": "Mo-Fr 07:00-18:00",
   "sameAs": [
     `${seoConfig.siteUrl}`,
   ]
@@ -183,16 +179,16 @@ export const servicesSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Maçonnerie générale",
-          "description": "Élévation de murs, cloisons, dalles, chapes, gros second œuvre"
+          "name": "Maçonnerie & Gros œuvre",
+          "description": "Fondations, élévation de murs, dalles, chapes, structures"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service", 
-          "name": "Pose de menuiserie",
-          "description": "Installation de fenêtres, portes, volets, cloisons"
+          "name": "Rénovation & Extension",
+          "description": "Réfection de façades, reprise de maçonnerie, extensions, aménagements"
         }
       }
     ]
