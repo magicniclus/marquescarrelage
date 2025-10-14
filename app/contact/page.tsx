@@ -47,7 +47,7 @@ export default function ContactPage() {
   const contactInfo = {
     address: "Zone d'intervention :\nÎle-de-France",
     phone: "06 99 37 42 63",
-    email: "contact@bouzalmata.fr",
+    email: "contact@mbtp.fr",
     hours: "Lundi - Vendredi: 7h00 - 18h00\nSamedi: 8h00 - 12h00",
     mapEmbedUrl: "https://maps.google.com/maps?q=Ile-de-France,France&t=&z=9&ie=UTF8&iwloc=&output=embed"
   };

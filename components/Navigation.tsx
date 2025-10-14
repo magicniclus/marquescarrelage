@@ -68,21 +68,21 @@ export default function Navigation() {
           >
             <Link href="/" className="flex items-center space-x-2">
               <motion.div 
-                className="w-12 h-12 rounded-xl bg-slate-700 flex items-center justify-center shadow-lg overflow-hidden"
+                className="w-18 h-18 rounded-xl flex items-center justify-center overflow-hidden bg-white"
                 whileHover={{ rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Image 
                   src="/logo.png" 
                   alt="Logo" 
-                  width={40} 
-                  height={40} 
+                  width={100} 
+                  height={100} 
                   className="object-contain"
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">Bouzalmata</span>
-                <span className="text-xs text-gray-600 font-medium">maçonnerie - gros œuvre</span>
+                {/* <span className="text-xl font-bold text-gray-900">MBTP</span>
+                <span className="text-xs text-gray-600 font-medium">maçonnerie - gros œuvre</span> */}
               </div>
             </Link>
           </motion.div>
@@ -199,7 +199,7 @@ export default function Navigation() {
             <div className="flex justify-between items-center p-6 border-b">
               <div className="flex items-center space-x-2">
                 <motion.div 
-                  className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden bg-white"
                   whileHover={{ rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -213,7 +213,7 @@ export default function Navigation() {
                 </motion.div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-foreground">
-                    Bouzalmata
+                    MBTP
                   </span>
                   <span className="text-xs text-gray-400 font-medium">
                     maçonnerie - gros œuvre

@@ -23,7 +23,7 @@ export default function Home() {
     {
       title: "Maçonnerie & Gros Œuvre",
       subtitle: "Fondations & Structures",
-      content: "Fondations, élévation de murs, dalles, chapes, structures. Bouzalmata SARL réalise tous vos travaux de gros œuvre avec une équipe expérimentée depuis 2016.",
+      content: "Fondations, élévation de murs, dalles, chapes, structures. MBTP SARL réalise tous vos travaux de gros œuvre avec une équipe expérimentée depuis 2016.",
       image: "/macon.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b"
@@ -43,7 +43,7 @@ export default function Home() {
   const contactInfo = {
     address: "Zone d'intervention :\nÎle-de-France",
     phone: "06 99 37 42 63",
-    email: "contact@bouzalmata.fr",
+    email: "contact@mbtp.fr",
     mapEmbedUrl: "https://maps.google.com/maps?q=Ile-de-France,France&t=&z=9&ie=UTF8&iwloc=&output=embed"
   };
 

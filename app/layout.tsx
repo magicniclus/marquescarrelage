@@ -5,32 +5,32 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
-  description: "Bouzalmata SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit pour vos projets de construction et rénovation.",
-  keywords: "maçonnerie Île-de-France, gros œuvre Paris, maçon professionnel 75, construction Seine-et-Marne, rénovation Essonne, maçonnerie Val-de-Marne, gros œuvre Hauts-de-Seine, entreprise maçonnerie 77, maçon 78, construction 91, Bouzalmata, travaux maçonnerie, devis gratuit, SARL maçonnerie",
-  authors: [{ name: "Bouzalmata" }],
-  creator: "Bouzalmata",
-  publisher: "Bouzalmata SARL",
+  title: "MBTP - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
+  description: "MBTP SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit pour vos projets de construction et rénovation.",
+  keywords: "maçonnerie Île-de-France, gros œuvre Paris, maçon professionnel 75, construction Seine-et-Marne, rénovation Essonne, maçonnerie Val-de-Marne, gros œuvre Hauts-de-Seine, entreprise maçonnerie 77, maçon 78, construction 91, MBTP, travaux maçonnerie, devis gratuit, SARL maçonnerie",
+  authors: [{ name: "MBTP" }],
+  creator: "MBTP",
+  publisher: "MBTP SARL",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://bouzalmata.fr"),
+  metadataBase: new URL("https://mbtp.fr"),
   alternates: {
-    canonical: "https://bouzalmata.fr",
+    canonical: "https://mbtp.fr",
   },
   openGraph: {
-    title: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
-    description: "Bouzalmata SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit.",
-    url: "https://bouzalmata.fr",
-    siteName: "Bouzalmata - Maçonnerie & Gros Œuvre",
+    title: "MBTP - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
+    description: "MBTP SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit.",
+    url: "https://mbtp.fr",
+    siteName: "MBTP - Maçonnerie & Gros Œuvre",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France",
+        alt: "MBTP - Maçonnerie & Gros Œuvre en Île-de-France",
       },
     ],
     locale: "fr_FR",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bouzalmata - Maçonnerie & Gros Œuvre",
-    description: "Entreprise SARL spécialisée en maçonnerie et gros œuvre en Île-de-France depuis 2016. Devis gratuit.",
+    title: "MBTP - Maçonnerie & Gros Œuvre",
+    description: "MBTP SARL spécialisée en maçonnerie et gros œuvre en Île-de-France depuis 2016. Devis gratuit.",
     images: ["/og-image.jpg"],
   },
   robots: {

@@ -1,15 +1,15 @@
 {
   "company": {
-    "name": "Bouzalmata",
-    "legalName": "Bouzalmata SARL",
+    "name": "MBTP",
+    "legalName": "MBTP SARL",
     "address": "Secteur d'activité : Île-de-France",
     "phone": "06 99 37 42 63",
-    "email": "contact@bouzalmata.fr",
+    "email": "contact@mbtp.fr",
     "siret": "",
-    "ceo": "Bouzalmata"
+    "ceo": "MBTP"
   },
   "hero": {
-    "title": "Bouzalmata - Maçonnerie & Gros Œuvre",
+    "title": "MBTP - Maçonnerie & Gros Œuvre",
     "subtitle": "Entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Votre partenaire de confiance en Île-de-France pour tous vos projets de construction et rénovation avec une équipe expérimentée.",
     "buttonText": "Demander un devis",
     "buttonHref": "#contact",
@@ -22,7 +22,7 @@
         "smallTitle": "Notre expertise",
         "title": "Maçonnerie & Gros Œuvre",
         "subtitle": "Spécialistes depuis 2016",
-        "content": "Bouzalmata SARL est spécialisée dans la maçonnerie et le gros œuvre depuis 2016. Nous réalisons tous vos travaux de construction : fondations, élévation de murs, dalles, chapes, et structures. Notre équipe de professionnels garantit des réalisations durables et conformes aux normes en vigueur en Île-de-France.",
+        "content": "MBTP SARL est spécialisée dans la maçonnerie et le gros œuvre depuis 2016. Nous réalisons tous vos travaux de construction : fondations, élévation de murs, dalles, chapes, et structures. Notre équipe de professionnels garantit des réalisations durables et conformes aux normes en vigueur en Île-de-France.",
         "image": "/maison-1.png",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
@@ -88,13 +88,13 @@
   "team": {
     "members": [
       {
-        "name": "Bouzalmata",
+        "name": "MBTP",
         "position": "Dirigeant & Maître Maçon",
-        "description": "Fondateur de Bouzalmata SARL en 2016, spécialisé en maçonnerie et gros œuvre. Expert reconnu dans le secteur avec plus de 8 ans d'expérience en Île-de-France.",
+        "description": "Fondateur de MBTP SARL en 2016, spécialisé en maçonnerie et gros œuvre. Expert reconnu dans le secteur avec plus de 8 ans d'expérience en Île-de-France.",
         "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
       },
       {
-        "name": "Équipe Bouzalmata",
+        "name": "Équipe MBTP",
         "position": "Équipe de Maçons Professionnels",
         "description": "Une équipe de 6 à 10 collaborateurs expérimentés, spécialisés dans la maçonnerie et le gros œuvre. Intervention sur tous types de chantiers en Île-de-France.",
         "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
@@ -104,34 +104,24 @@
   "partners": {
     "logos": [
       {
-        "src": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop",
-        "alt": "Partenaire 1",
-        "name": "Partner 1"
+        "src": "/patenaire/tmc-partenaire.png",
+        "alt": "Trouver Mon Chantier",
+        "name": "Trouver Mon Chantier"
       },
       {
-        "src": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop",
-        "alt": "Partenaire 2",
-        "name": "Partner 2"
+        "src": "/patenaire/SMA_BTP.png",
+        "alt": "SMA BTP",
+        "name": "SMA BTP"
       },
       {
-        "src": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=200&h=100&fit=crop",
-        "alt": "Partenaire 3",
-        "name": "Partner 3"
+        "src": "/patenaire/decennale.png",
+        "alt": "Assurance Décennale",
+        "name": "Assurance Décennale"
       },
       {
-        "src": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=100&fit=crop",
-        "alt": "Partenaire 4",
-        "name": "Partner 4"
-      },
-      {
-        "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&h=100&fit=crop",
-        "alt": "Partenaire 5",
-        "name": "Partner 5"
-      },
-      {
-        "src": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=200&h=100&fit=crop",
-        "alt": "Partenaire 6",
-        "name": "Partner 6"
+        "src": "/patenaire/qonto.png",
+        "alt": "Qonto",
+        "name": "Qonto"
       }
     ]
   },

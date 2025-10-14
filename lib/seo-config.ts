@@ -14,8 +14,8 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "Bouzalmata - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
-  description: "Bouzalmata SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit pour vos projets de construction et rénovation.",
+  title: "MBTP - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
+  description: "MBTP SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit pour vos projets de construction et rénovation.",
   keywords: [
     "maçonnerie Île-de-France",
     "gros œuvre Paris",
@@ -27,20 +27,20 @@ export const seoConfig: SEOConfig = {
     "entreprise maçonnerie 77",
     "maçon 78",
     "construction 91",
-    "Bouzalmata",
+    "MBTP",
     "travaux maçonnerie",
     "devis gratuit",
     "SARL maçonnerie",
     "fondations",
     "structures"
   ],
-  author: "Bouzalmata",
-  siteUrl: "https://bouzalmata.fr",
-  siteName: "Bouzalmata - Maçonnerie & Gros Œuvre",
+  author: "MBTP",
+  siteUrl: "https://mbtp.fr",
+  siteName: "MBTP - Maçonnerie & Gros Œuvre",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
-  twitterHandle: "@bouzalmata"
+  twitterHandle: "@mbtp"
 };
 
 export function generateMetadata(
@@ -117,15 +117,15 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
-  "name": "Bouzalmata",
-  "legalName": "Bouzalmata SARL",
+  "name": "MBTP",
+  "legalName": "MBTP SARL",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
   "description": seoConfig.description,
   "founder": {
     "@type": "Person",
-    "name": "Bouzalmata"
+    "name": "MBTP"
   },
   "foundingDate": "2016",
   "numberOfEmployees": "6-10",
@@ -138,7 +138,7 @@ export const organizationSchema = {
     "@type": "ContactPoint",
     "telephone": "+33699374263",
     "contactType": "customer service",
-    "email": "contact@bouzalmata.fr",
+    "email": "contact@mbtp.fr",
     "availableLanguage": "French"
   },
   "areaServed": [

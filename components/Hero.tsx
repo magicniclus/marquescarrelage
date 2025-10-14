@@ -25,8 +25,8 @@ export default function Hero({
   config,
   backgroundImage,
   backgroundVideo,
-  title = "Bouzalmata - Maçonnerie & Gros Œuvre",
-  description = "Entreprise SARL spécialisée en maçonnerie et gros œuvre depuis 2016. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Île-de-France.",
+  title = "MBTP - Maçonnerie & Gros Œuvre",
+  description = "MBTP SARL spécialisée en maçonnerie et gros œuvre depuis 2016. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Île-de-France.",
   bulletPoints = [
     "Entreprise SARL créée en 2016",
     "Équipe de 6 à 10 professionnels expérimentés",
