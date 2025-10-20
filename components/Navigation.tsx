@@ -81,7 +81,7 @@ export default function Navigation() {
                 />
               </motion.div>
               <div className="flex flex-col ml-3">
-                <span className="text-xl font-bold text-gray-900">Marquès Carrelage</span>
+                <span className="text-xl font-bold text-gray-900">Marques Carrelage</span>
                 <span className="text-sm text-gray-600 font-medium">Carrelage, peinture et placo</span>
               </div>
             </Link>
