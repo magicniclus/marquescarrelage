@@ -14,33 +14,33 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "MBTP - Maçonnerie & Gros Œuvre en Île-de-France depuis 2016",
-  description: "MBTP SARL, entreprise spécialisée en maçonnerie et gros œuvre depuis 2016. Équipe de 6 à 10 professionnels en Île-de-France. Devis gratuit pour vos projets de construction et rénovation.",
+  title: "MARQUES CARRELAGE - Pose de Carrelage, Peinture et Placo en Haute-Savoie",
+  description: "MARQUES CARRELAGE, spécialiste en pose de carrelage, peinture et placo avec 30 ans d'expérience. Intervention dans un rayon de 300km autour de Gaillard. Devis gratuit pour vos travaux de rénovation.",
   keywords: [
-    "maçonnerie Île-de-France",
-    "gros œuvre Paris",
-    "maçon professionnel 75",
-    "construction Seine-et-Marne",
-    "rénovation Essonne",
-    "maçonnerie Val-de-Marne",
-    "gros œuvre Hauts-de-Seine",
-    "entreprise maçonnerie 77",
-    "maçon 78",
-    "construction 91",
-    "MBTP",
-    "travaux maçonnerie",
+    "carrelage Haute-Savoie",
+    "pose carrelage Gaillard",
+    "carreleur professionnel 74",
+    "peinture Annemasse",
+    "placo Haute-Savoie",
+    "rénovation Gaillard",
+    "travaux carrelage Genève",
+    "entreprise carrelage 74",
+    "peintre 74240",
+    "plaquiste Haute-Savoie",
+    "MARQUES CARRELAGE",
+    "revêtement sols murs",
     "devis gratuit",
-    "SARL maçonnerie",
-    "fondations",
-    "structures"
+    "entrepreneur individuel",
+    "carrelage salle de bain",
+    "rénovation intérieure"
   ],
-  author: "MBTP",
-  siteUrl: "https://mbtp.fr",
-  siteName: "MBTP - Maçonnerie & Gros Œuvre",
+  author: "José MARQUES",
+  siteUrl: "https://marques-carrelage.fr",
+  siteName: "MARQUES CARRELAGE - Pose de Carrelage, Peinture et Placo",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
-  twitterHandle: "@mbtp"
+  twitterHandle: "@marquescarrelage"
 };
 
 export function generateMetadata(
@@ -117,43 +117,50 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
-  "name": "MBTP",
-  "legalName": "MBTP SARL",
+  "name": "MARQUES CARRELAGE",
+  "legalName": "ENTREPRENEUR INDIVIDUEL",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
   "description": seoConfig.description,
   "founder": {
     "@type": "Person",
-    "name": "MBTP"
+    "name": "José MARQUES"
   },
-  "foundingDate": "2016",
-  "numberOfEmployees": "6-10",
+  "foundingDate": "2025",
+  "numberOfEmployees": "2-5",
   "address": {
     "@type": "PostalAddress",
-    "addressRegion": "Île-de-France",
+    "streetAddress": "88 B RUE DE BAS VERNAZ",
+    "addressLocality": "GAILLARD",
+    "postalCode": "74240",
+    "addressRegion": "Haute-Savoie",
     "addressCountry": "FR"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+33699374263",
+    "telephone": "+33681648237",
     "contactType": "customer service",
-    "email": "contact@mbtp.fr",
+    "email": "marques.carrelage25@gmail.com",
     "availableLanguage": "French"
   },
   "areaServed": [
     {
       "@type": "AdministrativeArea",
-      "name": "Île-de-France"
+      "name": "Haute-Savoie"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Région Genève"
     }
   ],
   "serviceType": [
-    "Maçonnerie",
-    "Gros œuvre", 
-    "Fondations",
-    "Construction",
+    "Pose de carrelage",
+    "Travaux de peinture", 
+    "Pose de placo",
+    "Revêtements sols et murs",
     "Rénovation",
-    "Extension"
+    "Travaux de finition"
   ],
   "priceRange": "€€",
   "openingHours": "Mo-Fr 07:00-18:00",
@@ -166,29 +173,37 @@ export const organizationSchema = {
 export const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Construction Services",
+  "serviceType": "Renovation Services",
   "provider": {
     "@id": `${seoConfig.siteUrl}#organization`
   },
   "areaServed": organizationSchema.areaServed,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Services de construction",
+    "name": "Services de rénovation",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Maçonnerie & Gros œuvre",
-          "description": "Fondations, élévation de murs, dalles, chapes, structures"
+          "name": "Pose de Carrelage",
+          "description": "Spécialisé dans la pose de carrelage pour sols et murs, intérieur et extérieur"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service", 
-          "name": "Rénovation & Extension",
-          "description": "Réfection de façades, reprise de maçonnerie, extensions, aménagements"
+          "name": "Travaux de Peinture",
+          "description": "Peinture intérieure et extérieure, préparation des supports, finitions soignées"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Pose de Placo",
+          "description": "Installation de cloisons en placo, doublages, faux plafonds"
         }
       }
     ]

@@ -1,29 +1,29 @@
 {
   "company": {
-    "name": "MBTP",
-    "legalName": "MBTP SARL",
-    "address": "Secteur d'activité : Île-de-France",
-    "phone": "06 99 37 42 63",
-    "email": "contact@mbtp.fr",
+    "name": "MARQUES CARRELAGE",
+    "legalName": "ENTREPRENEUR INDIVIDUEL",
+    "address": "88 B RUE DE BAS VERNAZ, 74240 GAILLARD",
+    "phone": "0681648237",
+    "email": "marques.carrelage25@gmail.com",
     "siret": "",
-    "ceo": "MBTP"
+    "ceo": "JOSE MARQUES"
   },
   "hero": {
-    "title": "MBTP - Maçonnerie & Gros Œuvre",
-    "subtitle": "Spécialiste du carrelage et revêtements de sol depuis 2016. Votre expert de confiance en Île-de-France pour tous vos projets de pose de carrelage, faïence et revêtements dans le secteur résidentiel et commercial.",
+    "title": "MARQUES CARRELAGE - Votre expert carreleur",
+    "subtitle": "Spécialiste en pose de carrelage, peinture et placo depuis 30 ans d'expérience. Votre expert de confiance pour tous vos travaux de rénovation dans un rayon de 300km autour de Gaillard.",
     "buttonText": "Demander un devis",
     "buttonHref": "#contact",
-    "backgroundImage": "",
-    "backgroundVideo": "/video.mp4"
+    "backgroundImage": "/hero.jpg",
+    "backgroundVideo": ""
   },
   "about": {
     "sections": [
       {
         "smallTitle": "Notre expertise",
-        "title": "Maçonnerie & Gros Œuvre",
-        "subtitle": "Spécialistes depuis 2016",
-        "content": "MBTP SARL est spécialisée dans la maçonnerie et le gros œuvre depuis 2016. Nous réalisons tous vos travaux de construction : fondations, élévation de murs, dalles, chapes, et structures. Notre équipe de professionnels garantit des réalisations durables et conformes aux normes en vigueur en Île-de-France.",
-        "image": "/maison-1.png",
+        "title": "30 Ans d'Expérience",
+        "subtitle": "Certification et savoir-faire",
+        "content": "Avec 30 ans d'expérience dans le domaine, j'ai appris le métier avec mon père et suis à mon compte depuis 2010 au Portugal. J'ai décidé d'ouvrir mon entreprise en France en 2025 suite à des obligations familiales, pour que mon fils puisse voir sa mère plus souvent. Mon expertise couvre la pose de carrelage, peinture et placo.",
+        "image": "/about1.jpg",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
         "buttonText": "Voir nos réalisations",
@@ -31,11 +31,11 @@
         "reversed": false
       },
       {
-        "smallTitle": "Nos spécialités",
-        "title": "Travaux de rénovation",
-        "subtitle": "Expertise complète",
-        "content": "En complément de nos activités de gros œuvre, nous intervenons sur tous vos projets de rénovation : réfection de façades, reprise de maçonnerie, aménagements intérieurs. Notre équipe de 6 à 10 collaborateurs expérimentés vous accompagne dans tous vos projets en Île-de-France.",
-        "image": "/maison-2.png",
+        "smallTitle": "Notre histoire",
+        "title": "Un Parcours Professionnel",
+        "subtitle": "De père en fils",
+        "content": "Je travaille depuis mes 15 ans avec mon père dans cette profession. En 2010, j'ai décidé d'ouvrir ma société au Portugal que j'ai dû fermer en décembre 2024 par obligation familiale. Mon entreprise au Portugal était spécialisée en pose carrelage, pose de pladur (placo) et peinture. Aujourd'hui, je continue cette tradition familiale en France.",
+        "image": "/about2.png",
         "gradientFrom": "#667eea",
         "gradientTo": "#764ba2",
         "buttonText": "Contactez-nous",
@@ -46,38 +46,38 @@
   },
   "gallery": {
     "title": "Nos Réalisations",
-    "subtitle": "Découvrez nos derniers chantiers en Île-de-France",
+    "subtitle": "Découvrez nos travaux de carrelage, peinture et placo dans un rayon de 300km",
     "initialDisplayCount": 4,
     "images": [
       {
         "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-        "alt": "Maçonnerie générale",
-        "title": "Maçonnerie générale - Paris (75)"
+        "alt": "Pose de carrelage",
+        "title": "Pose de carrelage - Gaillard (74)"
       },
       {
         "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Pose de menuiserie",
-        "title": "Gros œuvre - Créteil (94)"
+        "alt": "Travaux de peinture",
+        "title": "Travaux de peinture - Annemasse (74)"
       },
       {
         "src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=800&fit=crop",
-        "alt": "Gros second œuvre",
-        "title": "Construction neuve - Meaux (77)"
+        "alt": "Pose de placo",
+        "title": "Pose de placo - Genève région"
       },
       {
         "src": "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=800&fit=crop",
-        "alt": "Cloisons maçonnerie",
-        "title": "Rénovation - Versailles (78)"
+        "alt": "Rénovation complète",
+        "title": "Rénovation complète - Haute-Savoie"
       },
       {
         "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Pose de portes",
-        "title": "Façade - Pontoise (95)"
+        "alt": "Carrelage salle de bain",
+        "title": "Carrelage salle de bain - Thonon"
       },
       {
         "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-        "alt": "Rénovation maçonnerie",
-        "title": "Extension - Bobigny (93)"
+        "alt": "Revêtement sol",
+        "title": "Revêtement sol - Évian"
       }
     ]
   },
@@ -88,15 +88,15 @@
   "team": {
     "members": [
       {
-        "name": "MBTP",
-        "position": "Dirigeant & Maître Maçon",
-        "description": "Fondateur de MBTP SARL en 2016, spécialisé en maçonnerie et gros œuvre. Expert reconnu dans le secteur avec plus de 8 ans d'expérience en Île-de-France.",
+        "name": "José MARQUES",
+        "position": "Dirigeant & Artisan Carreleur",
+        "description": "Entrepreneur individuel avec 30 ans d'expérience dans le domaine. Spécialisé en pose de carrelage, peinture et placo. Formation acquise de père en fils, à mon compte depuis 2010.",
         "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
       },
       {
-        "name": "Équipe MBTP",
-        "position": "Équipe de Maçons Professionnels",
-        "description": "Une équipe de 6 à 10 collaborateurs expérimentés, spécialisés dans la maçonnerie et le gros œuvre. Intervention sur tous types de chantiers en Île-de-France.",
+        "name": "Équipe MARQUES CARRELAGE",
+        "position": "Équipe de 2-5 Collaborateurs",
+        "description": "Une équipe réduite mais expérimentée, spécialisée dans les travaux de revêtement des sols et des murs. Intervention dans un rayon de 300km pour tous vos projets de rénovation.",
         "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
       }
     ]
@@ -109,19 +109,14 @@
         "name": "Trouver Mon Chantier"
       },
       {
-        "src": "/patenaire/SMA_BTP.png",
-        "alt": "SMA BTP",
-        "name": "SMA BTP"
+        "src": "/patenaire/cic.png",
+        "alt": "Banque CIC",
+        "name": "Banque CIC"
       },
       {
         "src": "/patenaire/decennale.png",
         "alt": "Assurance Décennale",
         "name": "Assurance Décennale"
-      },
-      {
-        "src": "/patenaire/qonto.png",
-        "alt": "Qonto",
-        "name": "Qonto"
       }
     ]
   },

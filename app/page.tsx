@@ -21,30 +21,38 @@ export default function Home() {
   });
   const servicesData = [
     {
-      title: "Maçonnerie & Gros Œuvre",
-      subtitle: "Fondations & Structures",
-      content: "Fondations, élévation de murs, dalles, chapes, structures. MBTP SARL réalise tous vos travaux de gros œuvre avec une équipe expérimentée depuis 2016.",
-      image: "/macon.png",
+      title: "Pose de Carrelage",
+      subtitle: "Revêtements sols et murs",
+      content: "Spécialisé dans la pose de carrelage pour sols et murs, intérieur et extérieur. 30 ans d'expérience pour des finitions parfaites et durables.",
+      image: "/1.jpg",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b"
     },
     {
-      title: "Rénovation & Extension",
-      subtitle: "Transformation d'espaces",
-      content: "Réfection de façades, reprise de maçonnerie, extensions, aménagements. Notre équipe de 6 à 10 collaborateurs vous accompagne dans tous vos projets.",
-      image: "/menuiserie.png",
+      title: "Travaux de Peinture",
+      subtitle: "Finitions intérieures",
+      content: "Peinture intérieure et extérieure, préparation des supports, finitions soignées. Expertise acquise de père en fils pour un rendu professionnel.",
+      image: "/2.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2"
+    },
+    {
+      title: "Pose de Placo",
+      subtitle: "Cloisons et doublages",
+      content: "Installation de cloisons en placo, doublages, faux plafonds. Aménagement d'espaces avec une finition impeccable pour tous vos projets de rénovation.",
+      image: "/3.png",
+      gradientFrom: "#28a745",
+      gradientTo: "#20c997"
     }
   ];
 
 
 
   const contactInfo = {
-    address: "Zone d'intervention :\nÎle-de-France",
-    phone: "06 99 37 42 63",
-    email: "contact@mbtp.fr",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Ile-de-France,France&t=&z=9&ie=UTF8&iwloc=&output=embed"
+    address: "88 B RUE DE BAS VERNAZ\n74240 GAILLARD\nRayon d'intervention : 300km",
+    phone: "0681648237",
+    email: "marques.carrelage25@gmail.com",
+    mapEmbedUrl: "https://maps.google.com/maps?q=88+B+RUE+DE+BAS+VERNAZ,74240+GAILLARD,France&t=&z=15&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -95,7 +103,7 @@ export default function Home() {
       <TeamSection config={config.team} />
       <ContactSection 
         title="Contactez-nous"
-        subtitle="Parlons de votre projet de maçonnerie ou pose de menuiserie en Bretagne et Normandie"
+        subtitle="Parlons de votre projet de carrelage, peinture ou placo dans un rayon de 300km"
         contactInfo={contactInfo} 
       />
 

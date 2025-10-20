@@ -55,8 +55,9 @@ export default function ServicesSection({
 
         {/* Cards Grid */}
         <div className={`grid gap-8 ${
+          cards.length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
           cards.length === 2 ? 'md:grid-cols-2' :
-          cards.length === 3 ? 'md:grid-cols-2 lg:grid-cols-3' :
+          cards.length === 3 ? 'md:grid-cols-1 lg:grid-cols-3' :
           'md:grid-cols-2 lg:grid-cols-4'
         }`}>
           {cards.map((card, index) => (
@@ -69,9 +70,9 @@ export default function ServicesSection({
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <div className="flex flex-col md:flex-row h-full">
-                {/* Left side - Image or Gradient */}
-                <div className="w-full md:w-1/3 h-48 md:h-auto relative">
+              <div className="flex flex-col h-full">
+                {/* Top - Image or Gradient */}
+                <div className="w-full h-48 relative">
                   {card.image ? (
                     <Image
                       src={card.image}
@@ -87,7 +88,7 @@ export default function ServicesSection({
                   )}
                 </div>
 
-                {/* Right side - Content */}
+                {/* Bottom - Content */}
                 <div className="flex-1 p-6 flex flex-col justify-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {card.title}

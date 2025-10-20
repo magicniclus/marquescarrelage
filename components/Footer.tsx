@@ -43,17 +43,17 @@ export default function Footer() {
                   />
                 </motion.div>
                 <span className="text-xl font-bold">
-                  MBTP
+                  MARQUES CARRELAGE
                 </span>
               </div>
               <p className="text-slate-300 text-sm leading-relaxed">
-                MBTP SARL - Spécialiste en maçonnerie et gros œuvre depuis 2016. Intervention en Île-de-France.
+                MARQUES CARRELAGE - Spécialiste en pose de carrelage, peinture et placo depuis 30 ans. Intervention dans un rayon de 300km.
               </p>
               <a 
-                href="tel:0699374263" 
+                href="tel:0681648237" 
                 className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
               >
-                06 99 37 42 63
+                06 81 64 82 37
               </a>
             </motion.div>
 
@@ -92,11 +92,11 @@ export default function Footer() {
               <h3 className="text-lg font-semibold">Contact</h3>
               <div className="space-y-2">
                 <a 
-                  href="tel:0699374263"
+                  href="tel:0681648237"
                   className="text-slate-300 hover:text-white text-sm transition-colors duration-200 block flex items-center space-x-2"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>06 99 37 42 63</span>
+                  <span>06 81 64 82 37</span>
                 </a>
                 <p className="text-slate-400 text-xs">
                   Service gratuit 7j/7 de 9h à 19h
@@ -117,7 +117,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              © {currentYear} MBTP SARL. Tous droits réservés.
+              © {currentYear} MARQUES CARRELAGE. Tous droits réservés.
             </motion.p>
 
             {/* Powered by */}

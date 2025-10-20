@@ -25,12 +25,12 @@ export default function Hero({
   config,
   backgroundImage,
   backgroundVideo,
-  title = "MBTP - Maçonnerie & Gros Œuvre",
-  description = "MBTP SARL spécialisée en maçonnerie et gros œuvre depuis 2016. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Île-de-France.",
+  title = "MARQUES CARRELAGE - Travaux de Revêtement",
+  description = "Spécialiste en pose de carrelage, peinture et placo depuis 30 ans d'expérience. Votre expert de confiance pour tous vos travaux de rénovation dans un rayon de 300km autour de Gaillard.",
   bulletPoints = [
-    "Entreprise SARL créée en 2016",
-    "Équipe de 6 à 10 professionnels expérimentés",
-    "Intervention en Île-de-France"
+    "30 ans d'expérience dans le domaine",
+    "Équipe de 2-5 collaborateurs qualifiés",
+    "Intervention dans un rayon de 300km"
   ],
   googleReviewsWidget
 }: HeroProps) {
