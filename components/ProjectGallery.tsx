@@ -63,7 +63,11 @@ export default function ProjectGallery({
   };
 
   const showMoreImages = () => {
-    setDisplayCount(images.length);
+    setDisplayCount(galleryImages.length);
+  };
+
+  const showLessImages = () => {
+    setDisplayCount(galleryInitialDisplayCount);
   };
 
   useEffect(() => {
@@ -119,17 +123,12 @@ export default function ProjectGallery({
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                {image.title && (
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <p className="text-white font-medium">{image.title}</p>
-                  </div>
-                )}
               </motion.div>
             ))}
           </div>
 
-          {/* Show More Button */}
-          {hasMoreImages && (
+          {/* Show More/Less Button */}
+          {(hasMoreImages || displayCount > galleryInitialDisplayCount) && (
             <motion.div
               className="text-center mt-12"
               initial={{ opacity: 0, y: 20 }}
@@ -137,13 +136,24 @@ export default function ProjectGallery({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={showMoreImages}
-              >
-                Voir plus de réalisations ({images.length - displayCount} restantes)
-              </Button>
+              {hasMoreImages ? (
+                <Button
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={showMoreImages}
+                >
+                  Voir plus de réalisations ({galleryImages.length - displayCount} restantes)
+                </Button>
+              ) : (
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={showLessImages}
+                >
+                  Voir moins de réalisations
+                </Button>
+              )}
             </motion.div>
           )}
         </div>
@@ -153,7 +163,7 @@ export default function ProjectGallery({
       <AnimatePresence>
         {lightboxOpen && (
           <motion.div
-            className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
+            className="fixed inset-0 z-[100] bg-black flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -175,7 +185,7 @@ export default function ProjectGallery({
 
             {/* Carousel Container */}
             <motion.div
-              className="relative w-full md:h-full flex items-center justify-center md:flex md:items-center md:justify-center"
+              className="relative w-full h-full flex items-center justify-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -184,7 +194,7 @@ export default function ProjectGallery({
             >
               <Carousel 
                 setApi={setApi}
-                className="w-full h-full max-w-[95vw] max-h-[95vh]"
+                className="w-full h-full max-w-[90vw] max-h-[90vh] flex items-center"
                 opts={{
                   align: "center",
                   loop: true,
@@ -193,10 +203,10 @@ export default function ProjectGallery({
                   startIndex: selectedImageIndex,
                 }}
               >
-                <CarouselContent className="-ml-1">
+                <CarouselContent className="-ml-1 h-full flex items-center">
                   {galleryImages.map((image, index) => (
-                    <CarouselItem key={index} className="h-full flex items-center justify-center pl-0">
-                      <div className="relative w-full h-full flex items-center justify-center p-2 md:p-4">
+                    <CarouselItem key={index} className="h-full flex items-center justify-center pl-0 min-h-0">
+                      <div className="relative w-full h-full flex items-center justify-center min-h-0">
                         <Image
                           src={image.src}
                           alt={image.alt}
@@ -230,14 +240,6 @@ export default function ProjectGallery({
                 </button>
               </Carousel>
 
-              {/* Image Info */}
-              {galleryImages[current - 1]?.title && (
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 text-center">
-                  <p className="text-white text-lg font-medium bg-black/70 px-6 py-3 rounded-lg">
-                    {galleryImages[current - 1].title}
-                  </p>
-                </div>
-              )}
             </motion.div>
           </motion.div>
         )}

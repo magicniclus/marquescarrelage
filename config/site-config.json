@@ -47,37 +47,159 @@
   "gallery": {
     "title": "Nos Réalisations",
     "subtitle": "Découvrez nos travaux de carrelage, peinture et placo dans un rayon de 300km",
-    "initialDisplayCount": 4,
+    "initialDisplayCount": 8,
     "images": [
       {
-        "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-        "alt": "Pose de carrelage",
-        "title": "Pose de carrelage - Gaillard (74)"
+        "src": "/chantiers/1.jpeg",
+        "alt": "Réalisation carrelage"
       },
       {
-        "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Travaux de peinture",
-        "title": "Travaux de peinture - Annemasse (74)"
+        "src": "/chantiers/2.jpeg",
+        "alt": "Réalisation carrelage"
       },
       {
-        "src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=800&fit=crop",
-        "alt": "Pose de placo",
-        "title": "Pose de placo - Genève région"
+        "src": "/chantiers/3.jpeg",
+        "alt": "Réalisation carrelage"
       },
       {
-        "src": "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=800&fit=crop",
-        "alt": "Rénovation complète",
-        "title": "Rénovation complète - Haute-Savoie"
+        "src": "/chantiers/4.jpeg",
+        "alt": "Réalisation carrelage"
       },
       {
-        "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Carrelage salle de bain",
-        "title": "Carrelage salle de bain - Thonon"
+        "src": "/chantiers/5.jpeg",
+        "alt": "Réalisation carrelage"
       },
       {
-        "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop",
-        "alt": "Revêtement sol",
-        "title": "Revêtement sol - Évian"
+        "src": "/chantiers/6.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/7.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/8.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/9.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/10.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/11.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/12.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/13.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/14.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/15.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/16.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/17.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/18.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/19.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/20.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/21.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/22.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/23.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/24.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/25.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/26.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/27.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/28.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/29.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/30.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/31.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/32.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/33.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/34.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/35.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/36.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/37.jpeg",
+        "alt": "Réalisation carrelage"
+      },
+      {
+        "src": "/chantiers/38.jpeg",
+        "alt": "Réalisation carrelage"
       }
     ]
   },
@@ -86,12 +208,15 @@
     "subtitle": "Parlons de votre projet ensemble"
   },
   "team": {
+    "title": "Mot du Dirigeant",
+    "subtitle": "Un message personnel de José Marques",
     "members": [
       {
         "name": "José MARQUES",
         "position": "Dirigeant & Artisan Carreleur",
-        "description": "Entrepreneur individuel avec 30 ans d'expérience dans le domaine. Spécialisé en pose de carrelage, peinture et placo. Formation acquise de père en fils, à mon compte depuis 2010.",
-        "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+        "description": "Artisan passionné depuis plus de 30 ans",
+        "message": "Depuis 2010, ma priorité absolue, c'est votre satisfaction. Pourquoi ? Parce que derrière chaque carrelage posé, chaque mur peint, il y a votre projet de vie. Mon père m'a appris le métier, mais c'est vous qui m'avez appris l'écoute. Chaque matin, je me lève avec une seule obsession : que votre maison devienne exactement celle dont vous rêvez. Mes mains connaissent la matière, mais mon cœur connaît vos attentes. C'est ça, la différence MARQUES CARRELAGE. Alors, on se lance ensemble dans votre projet ?",
+        "photo": "/client.jpeg"
       }
     ]
   },

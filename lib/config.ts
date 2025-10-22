@@ -58,10 +58,13 @@ export interface TeamMember {
   name: string;
   position: string;
   description: string;
+  message?: string;
   photo: string;
 }
 
 export interface TeamConfig {
+  title?: string;
+  subtitle?: string;
   members: TeamMember[];
 }
 
